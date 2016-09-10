@@ -1,29 +1,56 @@
 package com.aqa;
 
+import com.aqa.kb.DocumentStore;
+
 import java.util.Scanner;
 
 /**
  * ZooQA ("Zoo-Kah")
  *
  */
-public class ZooQA 
-{
+public class ZooQA {
 
-    public ZooQA(boolean stats, boolean explicit) {
-        
+    /*
+     * Flag for displaying more than the standard information
+     */
+    private boolean explicit;
+
+    /*
+     * Flag for displaying statistics and counts throughout the pipeline
+     */
+    private boolean stats;
+
+    /*
+     * The DocumentStore for all the documents in the corpus
+     */
+    private DocumentStore docStore;
+
+    public ZooQA(boolean explicit, boolean stats) {
+        this.explicit = explicit;
+        this.stats = stats;        
+
+
         printIntro();
 
         if(explicit)
-            System.out.printf("Flags: {explicit: %b, stats: %b}\n", explicit, stats);
+            System.out.printf("[DEBUG] Flags: {explicit: %b, stats: %b}\n\n", this.explicit, this.stats);
 
         // Need to add corpus creation here
+        docStore = new DocumentStore(this.explicit, this.stats);
+        createCorpus();
 
-        promptQuery();
 
     }
 
-    public void printIntro()
-    {
+    private void createCorpus() {
+        System.out.println("Creating Corpus...");
+
+        docStore.loadDocuments();
+
+        System.out.println("Corpus Creation Successful");
+    }
+
+    private void printIntro() {
         System.out.println("\n************************************************************");
         
         System.out.println("Welcome to the Zoo-QA System.\n");
@@ -32,10 +59,10 @@ public class ZooQA
         System.out.println("namely those in the genus Crocodylus.");
 
         System.out.println("\nSimply enter your question into the terminal when");
-        System.out.println("prompted, or enter 'quit' into the prompt to exit");
+        System.out.println("prompted, or enter 'exit' into the prompt to exit");
         System.out.println("the system.");
 
-        System.out.println("************************************************************\n");
+        System.out.println("************************************************************");
     }
 
     public void promptQuery() {
@@ -47,7 +74,7 @@ public class ZooQA
             System.out.print("\nQuery: ");
             String query = scan.nextLine();
 
-            if(query.equalsIgnoreCase("quit"))
+            if(query.equalsIgnoreCase("exit"))
                 break;
 
             // Need to add code to parse the query, then pose that question to the knowledge base
@@ -57,8 +84,7 @@ public class ZooQA
 
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         boolean stats = false;
         boolean explicit = false;
 
@@ -71,8 +97,7 @@ public class ZooQA
                 throw new IllegalArgumentException("Argument not recognized: " + arg);
         }
 
-
-
-        ZooQA zooQA = new ZooQA(stats, explicit);
+        ZooQA zooQA = new ZooQA(explicit, stats);
+        zooQA.promptQuery();
     }
 }
