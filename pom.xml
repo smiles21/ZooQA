@@ -9,6 +9,17 @@
 
   <name>zoo-qa</name>
 
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.txt</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -16,6 +27,7 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>edu.stanford.nlp</groupId>
       <artifactId>stanford-corenlp</artifactId>
@@ -23,5 +35,6 @@
     </dependency>
 
   </dependencies>
+
 
 </project>
