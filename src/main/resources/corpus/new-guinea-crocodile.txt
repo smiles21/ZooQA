@@ -1,50 +1,35 @@
-
-
-New Guinea Crocodile
-
-  
-
-New Guinea crocodile
-
-  The New Guinea crocodile is a small species of crocodile found on the island of New Guinea where there are two geographically isolated populations to the north and south of the mountain ridge that runs along the centre of the island.
+<title>New Guinea Crocodile
+<header>New Guinea crocodile
+The New Guinea crocodile is a small species of crocodile found on the island of New Guinea where there are two geographically isolated populations to the north and south of the mountain ridge that runs along the centre of the island.
 In the past it included the Philippine crocodile as a subspecies, but today they are regarded as separate species.
 The habitat of the New Guinea crocodile is mostly freshwater swamps and lakes.
 It is most active at night when it feeds on fish and a range of other small animals.
 A female crocodile lays a clutch of eggs in a nest composed of vegetation and she lies up nearby to guard the nest.
 There is some degree of parental care for newly hatched juveniles.
 This crocodile was over-hunted for its valuable skin in the mid 20th century, but conservation measures have since been put in place, it is reared in ranches and the International Union for Conservation of Nature  lists it as being of "Least Concern".
- 
-
-Characteristics
-
-  The New Guinea crocodile grows to a length of up to 3.5 meters for males and 2.7 meters for females, although most specimens are smaller.
+<header>Characteristics
+The New Guinea crocodile grows to a length of up to 3.5 meters for males and 2.7 meters for females, although most specimens are smaller.
 The body ranges from grey to brown in colour, with darker bandings on the tail and body which become less noticeable as the animal grows.
 Longitudinal ridges in front of the eyes and some granular scales on the back of the neck between four large scales are distinctive features of this species.
 There are some differences between the northerly and southerly populations in the morphology of the skull and the arrangement of the scales.
 The snout is pointed and relatively narrow during juvenile stages and becomes wider as the animal matures.
 The New Guinea crocodile bears a physical similarity to the nearby Philippine crocodile and Siamese crocodile.
 The colouring is similar to that of the freshwater crocodile of northern Australia, but the snout is somewhat shorter and broader.
-  
-
-Distribution and habitat
-
-  This crocodile is to be found in the freshwater swamps, marshes and lakes of New Guinea, particularly in the interior.
+<header>Distribution and habitat
+This crocodile is to be found in the freshwater swamps, marshes and lakes of New Guinea, particularly in the interior.
 It has been known to enter brackish waters such as those of the Fly River estuary but is very rare in coastal areas, and never found in the presence of the competing saltwater crocodile.
 The animal was first described from the Sepik River area in the north of Papua New Guinea.
 A separate population is found in the southern half of the island, with a range that extends from southeastern Papua New Guinea to the Indonesian provinces of Papua and West Papua.
 It is separated from the northern population by the mountain range that runs along the centre of the island.
 DNA analysis has revealed these to be genetically separate populations.
 There are estimated to be between 50,000 and 100,000 New Guinea crocodiles in the wild.
- 
-
-Behaviour
-
-  New Guinea crocodiles have a mostly aquatic lifestyle and are largely nocturnal.
+<header>Behaviour
+New Guinea crocodiles have a mostly aquatic lifestyle and are largely nocturnal.
 They spend much of the day underwater, often with their nostrils and eyes above the surface.
 Powerful side-to-side movements of their tails propel them through the water and they use both tail and legs to steer.
 When on land, they favour shady, dense areas of undergrowth.
 They tend to bask in a group during the day, dispersing at night to feed.
- Females become sexually mature when about 1.6 to 2 metres long and males at about 2.5 metres.
+Females become sexually mature when about 1.6 to 2 metres long and males at about 2.5 metres.
 Eggs are laid about 14 days after mating.
 In the northern population, breeding takes place during the dry season between August and October.
 A floating nest composed of vegetation is made in a shallow water location such as in an overgrown channel, at the edge of a lake, on a scroll swale or beside a stream.
@@ -53,29 +38,26 @@ In the southern population, the wet season is chosen for reproduction.
 The nest is sometimes built in a similar locations to the northern nests, but is more often on land, and a smaller number of rather larger eggs is laid.
 In both populations, the mother stays near the nest during the incubation period, which lasts about 80 days.
 When the eggs start to hatch, the emerging young are quite vocal, and both male and female crocodiles have been observed transporting hatching and newly hatched young to open water, carrying them delicately in their mouths.
-  Newly hatched New Guinea crocodiles feed on aquatic insects, spiders, tadpoles, freshwater snails, frogs, fish and small mammals.
+Newly hatched New Guinea crocodiles feed on aquatic insects, spiders, tadpoles, freshwater snails, frogs, fish and small mammals.
 As they grow, so does the size of their prey and their consumption of fish rises, but they still will eat anything of a worthwhile size that they can find.
 An adult's diet is largely fish, caught by sweeping the snout sideways and snapping at the prey, but also includes shrimps, crabs, frogs, snakes, birds and medium-sized mammals.
 A crocodile catches its prey by stealth with a flick of its head, impaling it with its sharp teeth and gripping and crushing it.
 The jaws cannot move sideways to chew the food; instead, the crocodile's head is tossed to move the prey to the back of the mouth before the prey is swallowed whole.
 This crocodile is surprisingly agile and can lunge its body upward into the air to catch bats, flying birds, and leaping fish.
 It can also probe into the mud at the bottom of river or swamp with its snout to search for crabs and molluscs.
- Adult and young New Guinea crocodiles have a range of vocalisations.
+Adult and young New Guinea crocodiles have a range of vocalisations.
 An adult female can produce a repeated throaty "roar" when approached by another adult.
 The young start communicating with each other while still in the egg; this may help synchronise hatching.
 Newly hatched juveniles use various yelps and grunts.
 When startled, a warning sound emitted by one will send all the juveniles diving to the bottom of the water.
 Adults in the vicinity respond with growls, threats, and attacks.
 The distress noises of a youngster when handled at a ranching facility was observed to cause all the larger animals to become involved in frenzied activity, with some rushing towards the juvenile and others thrashing about in the water and slapping their heads down on the surface.
- 
-
-Status and conservation
-
-  The IUCN listed this crocodile as being "Vulnerable" in its Red List of Threatened Species in 1986 and 1988, but changed the assessment to "Least Concern" in 1996.
+<header>Status and conservation
+The IUCN listed this crocodile as being "Vulnerable" in its Red List of Threatened Species in 1986 and 1988, but changed the assessment to "Least Concern" in 1996.
 At the time it was stated that the animal has a large area of suitable habitat and seemed to be plentiful.
 Its status has not been reassessed since then.
 It is included in Appendix II of the Convention on International Trade in Endangered Species of Wild Fauna and Flora.
- The skin of the New Guinea crocodile is valuable and in the 1950s and 1960s the animals in the northern population were heavily hunted to a point where they might have become extinct.
+The skin of the New Guinea crocodile is valuable and in the 1950s and 1960s the animals in the northern population were heavily hunted to a point where they might have become extinct.
 Around 1970, legislation was put in place and they received some protection.
 In the period 1977 to 1980, the harvest of wild skins was over 20,000 per year but in the 1980s this declined to 12,000 to 20,000.
 As well as this, some 2,500 to 10,000 eggs and hatchlings were collected annually to raise on ranches.

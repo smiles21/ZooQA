@@ -1,37 +1,22 @@
-
-
-Phillipine Crocodile
-
-  
-
-Philippine crocodile
-
-  The Philippine crocodile, also known as the Mindoro crocodile, the Philippine freshwater crocodile or locally, bukarot, is one of two species of crocodiles found in the Philippines; the other is the larger Indo-Pacific crocodile or saltwater crocodile .
+<title>Phillipine Crocodile
+<header>Philippine crocodile
+The Philippine crocodile, also known as the Mindoro crocodile, the Philippine freshwater crocodile or locally, bukarot, is one of two species of crocodiles found in the Philippines; the other is the larger Indo-Pacific crocodile or saltwater crocodile .
 The Philippine crocodile, the species endemic only to the country, became data deficient to critically endangered in 2008 from exploitation and unsustainable fishing methods, such as dynamite fishing.
 Conservation methods are being taken by the Dutch/Filipino Mabuwaya foundation, the Crocodile Conservation Society and the Zoological Institute of HerpaWorld in Mindoro island.
 It is strictly prohibited to kill a crocodile in the country, and it is punishable by law.
- 
-
-Characteristics
-
-  The Philippine crocodile is a crocodilian endemic to the Philippines.
+<header>Characteristics
+The Philippine crocodile is a crocodilian endemic to the Philippines.
 It is a relatively small, freshwater crocodile.
 It has a relatively broad snout and thick bony plates on its back.
 This is a fairly small species, reaching breeding maturity at 1.5 meters and 15 kilograms in both sexes and a maximum size around 3.1 meters.
 Females are slightly smaller than males.
 Philippine crocodiles are golden-brown in color, which darkens as they mature.
- 
-
-Distribution and habitat
-
-  The Philippine crocodile has been extirpated in Samar, Jolo, Negros Island, Masbate, and Busuanga.
+<header>Distribution and habitat
+The Philippine crocodile has been extirpated in Samar, Jolo, Negros Island, Masbate, and Busuanga.
 Populations still survive in the Northern Sierra Madre Natural Park within the Luzon rainforest, San Mariano, Isabela, Dalupiri island in the Babuyan Islands, Abra in Luzon and the Ligawasan Marsh, Lake Sebu in South Cotabato, Pulangi River in Bukidnon, and possibly in the Agusan Marsh Wildlife Sanctuary in Mindanao.
 It was historically found in parts of Visayas and until the numbers were drastically cut by, mainly, habitat destruction.
- 
-
-Conservation status
-
-  This crocodile is one of the most severely threatened crocodilian species.
+<header>Conservation status
+This crocodile is one of the most severely threatened crocodilian species.
 Roughly 250 are left in the wild as of September 2011 according to an article in National Geographic.
 Although this species was once found over the whole of the Philippines, it is now critically endangered.
 In addition, very little is known about the natural history or ecology of the species, or its relationship with Crocodylus porosus, whose range it overlaps.
@@ -42,12 +27,12 @@ This situation needs to be changed through awareness programs.
 Long-term captive breeding and release is judged to be the best course to take at present, although a management program is imperative for the remainder of the wild population.
 In 1992, fewer than 1000 animals were estimated to remain in the wild.
 In 1995, that estimate was revised to be no more than 100 nonhatchlings.
- In 2007, a specialist group was founded by several people within the Philippines, involved in crocodilian conservation.
+In 2007, a specialist group was founded by several people within the Philippines, involved in crocodilian conservation.
 The Crocodile Conservation Society Philippines and the Zoological Institute of HerpaWorld are working on conservation breeding and release programs.
 The Phillipine crocodile was considered locally extinct in part of its former range in northern Luzon until a live specimen was caught in San Mariano, Isabela, in 1999.
 That individual, nicknamed 'Isabela' by its captors, was given to the care of the Crocodile Rehabilitation Observance and Conservation until it was released in August 2007.
 The specimen was 1.6 meters long at the time of its release.
- The Philippine crocodile became nationally protected by law in 2001 with the enactment of Republic Act 9147 known as the Wildlife Act.
+The Philippine crocodile became nationally protected by law in 2001 with the enactment of Republic Act 9147 known as the Wildlife Act.
 It is punishable to kill a crocodile, with a maximum penalty of ₱100,000.
 The Philippine Senate introduced resolution no.
 790 on May 31, 2012, to further strengthen and augment existing laws for the protection of the Philippine crocodile and the saltwater crocodile.

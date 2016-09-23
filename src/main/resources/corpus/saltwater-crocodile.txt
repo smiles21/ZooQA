@@ -1,26 +1,17 @@
-
-
-Saltwater Crocodile
-
-  
-
-Saltwater crocodile
-
-  The saltwater crocodile, also known as the estuarine crocodile, Indo-Pacific crocodile, marine crocodile, sea-going crocodile or informally as saltie, is the largest of all living reptiles, as well as the largest terrestrial and riparian predator in the world.
+<title>Saltwater Crocodile
+<header>Saltwater crocodile
+The saltwater crocodile, also known as the estuarine crocodile, Indo-Pacific crocodile, marine crocodile, sea-going crocodile or informally as saltie, is the largest of all living reptiles, as well as the largest terrestrial and riparian predator in the world.
 Males of this species can reach sizes up to at least 6.30 meters and possibly up to 7.0 meters in length.
 However, an adult male saltwater crocodile rarely reaches and exceeds a size of 6 meters weighing 1,000 to 1,200 kg.
 Females are much smaller and ofeeten do not surpass 3 m .
 As its name implies, this species of crocodile can live in marine environments, but usually resides in saline and brackish mangrove swamps, estuaries, deltas, lagoons, and lower stretches of rivers.
 They have the broadest distribution of any modern crocodile, ranging from the eastern coast of India, throughout most of Southeast Asia, and northern Australia.
- The saltwater crocodile is a formidable and opportunistic hypercarnivorous apex predator.
+The saltwater crocodile is a formidable and opportunistic hypercarnivorous apex predator.
 Most prey are ambushed and then drowned or swallowed whole.
 It is capable of prevailing over almost any animal that enters its territory, including other apex predators such as sharks, varieties of freshwater and marine fish including pelagic species, invertebrates, such as crustaceans, various reptiles, birds and mammals, including humans.
- Due to their size, aggression and distribution, saltwater crocodiles are regarded as the most dangerous extant crocodilian to humans.
-  
-
-Characteristics
-
-  The saltwater crocodile has a wide snout compared to most crocodiles.
+Due to their size, aggression and distribution, saltwater crocodiles are regarded as the most dangerous extant crocodilian to humans.
+<header>Characteristics
+The saltwater crocodile has a wide snout compared to most crocodiles.
 However, it has a longer muzzle than the mugger crocodile; its length is twice its width at the base.
 The saltwater crocodile has fewer armour plates on its neck than other crocodilians.
 On this species, a pair of ridges runs from the eyes along the centre of the snout.
@@ -34,18 +25,15 @@ The length of the specimen this came from is not known but based on skull-to-tot
 Although it is the largest overall living crocodilian and reptile, other crocodilians may have a proportionately longer skull, namely the gharial and the false gharial, skull lengths in the latter have been verified up to 84 centimeters, although both of these thin-snouted species have less massive skulls and considerably less massive bodies than the saltwater crocodile.
 The teeth are also long, with the largest teeth  having been measured at up to 9 centimeters in length.
 If detached from the body, the head of a very large male crocodile can reportedly weigh over 200 kilograms  alone, including the large muscles and tendons at the base of the skull that lend the crocodile its massive biting strength.
- Young saltwater crocodiles are pale yellow in colour with black stripes and spots on their bodies and tails.
+Young saltwater crocodiles are pale yellow in colour with black stripes and spots on their bodies and tails.
 This colouration lasts for several years until the crocodiles mature into adults.
 The colour as an adult is much darker greenish-drab, with a few lighter tan or grey areas sometimes apparent.
 Several colour variations are known and some adults may retain fairly pale skin, whereas others may be so dark as to appear blackish.
 The ventral surface is white or yellow in colour on saltwater crocodiles of all ages.
 Stripes are present on the lower sides of their bodies, but do not extend onto their bellies.
 Their tails are grey with dark bands.
-  
-
-Size
-
-  Saltwater crocodiles are the largest extant terrestrial and riparian predators in the world.
+<subheader>Size
+Saltwater crocodiles are the largest extant terrestrial and riparian predators in the world.
 However, they start life fairly small.
 Newly hatched saltwater crocodiles measure about 28 centimeters long and weigh an average of 71 grams.
 This distinct contrast in size between hatchlings and adult males is one of the greatest in terrestrial vertebrates.
@@ -54,13 +42,13 @@ Males reach sexual maturity around 3.3 m  at around 16 years of age, while femal
 The weight of a crocodile increases exponentially as length increases.[note 1] This explains why individuals at 6 meters can weigh more than twice that of individuals at 5 meters.
 In crocodiles, linear growth eventually decreases and they start getting bulkier at a certain point.
 Dominant males also tend to outweigh others, as they maintain prime territories with access to better, more abundant prey.
- Male size: An adult male saltwater crocodile, from young adults to older individuals, ranges 3.5 to 6 meters in length, weighing 200 to 1,000 kilograms.
+Male size: An adult male saltwater crocodile, from young adults to older individuals, ranges 3.5 to 6 meters in length, weighing 200 to 1,000 kilograms.
 On average, adult males range 4.3 to 4.9 meters in length and weigh 408 to 522 kilograms.
 However average size largely depends on the location, habitat, and human interactions, thus changes from one study to another, when figures of each study are viewed separately.
 In one case, Webb and Manolis attributed the average weight of adult males in Australian tidal rivers as only 240 to 350 kilograms at lengths of 4 to 4.5 meters during the 1980s, possibly representing a reduced body mass due to the species being in recovery after decades of overhunting at that stage, as males this size would typically weigh about 100 kilograms heavier.
 Rarely very large, aged males can exceed 6 meters in length and weigh well over 1,000 kilograms.
 The largest confirmed saltwater crocodile on record drowned in a fishing net in Papua New Guinea in 1979, its dried skin plus head measured 6.2 meters long and it was estimated to have been 6.3 m  when accounting for shrinkage and a missing tail tip.
- However, according to evidence, in the form of skulls coming from some of the largest crocodiles ever shot, the maximum possible size attained by the largest members of this species is considered to be 7 meters.
+However, according to evidence, in the form of skulls coming from some of the largest crocodiles ever shot, the maximum possible size attained by the largest members of this species is considered to be 7 meters.
 A research paper on the morphology and physiology of crocodilians by the government of Australia estimates that saltwater crocodiles approaching sizes of 7 meters would weigh around 2,000 kilograms.
 Due to extensive poaching during the 20th century, such individuals are extremely rare today in most areas, as it takes a long time for the crocodiles to attain those sizes.
 Also, a possible earlier presence of particular genes may have led to such large-sized saltwater crocodiles, genes that were ultimately lost from the overall gene pool due to extensive hide and trophy hunting in the past.
@@ -69,36 +57,33 @@ This species is the only extant crocodilian to regularly reach or exceed 5.2 met
 A large male from Philippines, named Lolong, was the largest saltwater crocodile ever caught and placed in captivity.
 He was 20 feet 3 in, and weighed 2,370 pounds.
 Believed to have eaten two villagers, Lolong was captured on 3 September 2011, and died in captivity on 10 February 2013.
- Female size: Adult females typically measure from 2.7 to 3.1 meters in total length and weigh 76 to 103 kilograms.
-  The largest female on record measured about 4.2 meters in total length.
+Female size: Adult females typically measure from 2.7 to 3.1 meters in total length and weigh 76 to 103 kilograms.
+The largest female on record measured about 4.2 meters in total length.
 Due to the extreme sexual dimorphism of the species as contrasted with the more modest size dimorphism of other species, the average length of the species is only slightly more than some other extant crocodilians at 3.8–4 meters.
-  
-
-Distribution and habitat
-
-  The saltwater crocodile is one of the three crocodilians found in India, the other two being the more regionally widespread, smaller mugger crocodile and the narrow-snouted, fish-eating gharial.
+<header>Distribution and habitat
+The saltwater crocodile is one of the three crocodilians found in India, the other two being the more regionally widespread, smaller mugger crocodile and the narrow-snouted, fish-eating gharial.
 Apart from the eastern coast of India, the saltwater crocodile is extremely rare on the Indian subcontinent.
 A large population is present within the Bhitarkanika Wildlife Sanctuary of Odisha and they are known to be present in smaller numbers throughout the Indian and Bangladeshi portions of the Sundarbans.
 The saltwater crocodile also persists in bordering Bangladesh as does the mugger and gharial.
 Populations are also present within the mangrove forests and other coastal areas of the Andaman and Nicobar Islands in India.
 Saltwater crocodiles were once present throughout most of the island of Sri Lanka, but remain mostly within protected areas such as Yala National Park, which also has a large population of mugger crocodiles.
- In northern Australia, the saltwater crocodile is thriving, particularly in the multiple river systems near Darwin such as the Adelaide, Mary, and Daly Rivers, along with their adjacent billabongs and estuaries.
+In northern Australia, the saltwater crocodile is thriving, particularly in the multiple river systems near Darwin such as the Adelaide, Mary, and Daly Rivers, along with their adjacent billabongs and estuaries.
 The saltwater crocodile population in Australia is estimated at 100,000 to 200,000 adults.
 In Australia, the species coexists with the smaller, narrow-snouted Johnston's or freshwater crocodile.
 Their range extends from Broome in Western Australia through the entire Northern Territory coast all the way south to Rockhampton in Queensland.
 The Alligator Rivers in the Arnhem Land region are misnamed due to the resemblance of the saltwater crocodile to alligators as compared to freshwater crocodiles, which also inhabit the Northern Territory.
 In New Guinea, they are also common, existing within the coastal reaches of virtually every river system in the country, such as the Fly River, along with all estuaries and mangroves, where they overlap in range but rarely in actuality or habitat with the rarer, less aggressive New Guinea crocodile.
 They are also present in varying numbers throughout the Bismarck Archipelago, the Kai Islands, the Aru Islands, the Maluku Islands and many other islands within the region, including Timor, and most islands within the Torres Strait.
- The saltwater crocodile was historically known to be widespread throughout Southeast Asia, but is now extinct throughout much of this range.
+The saltwater crocodile was historically known to be widespread throughout Southeast Asia, but is now extinct throughout much of this range.
 This species has not been reported in the wild for decades in most of Indochina and is extinct in Thailand, Laos, Vietnam, and possibly Cambodia.
 The status of this species is critical within much of Myanmar, but a stable population of many large adults is present in the Irrawaddy Delta.
 Probably, the only country in Indochina still harbouring wild populations of this species is Myanmar.
 Although saltwater crocodiles were once very common in the Mekong Delta and other river systems, the future of this species in Indochina is now looking grim.
 However, it is also the least likely of crocodilians to become globally extinct due to its wide distribution and almost precolonial population sizes in Northern Australia and New Guinea.
- The saltwater crocodile has been long extinct in China, where it inhabited the southern coastal areas from Fujian province in the north to the border of Vietnam.
+The saltwater crocodile has been long extinct in China, where it inhabited the southern coastal areas from Fujian province in the north to the border of Vietnam.
 References to large crocodiles that preyed on both humans and livestock appeared during the Han and Song Dynasties, where it occurred in the lower Pearl River near present-day Hong Kong and Macau, the Han River, the Min River in the north, portions of coastal Guangxi province and Hainan Island.
 The presence of crocodiles in Fujian province represent the northernmost distribution of the species.
- The population is sporadic in Indonesia and Malaysia, with some areas harbouring large populations and others with very small, at-risk populations.
+The population is sporadic in Indonesia and Malaysia, with some areas harbouring large populations and others with very small, at-risk populations.
 Despite the close proximity to the crocodile hotbed of northern Australia, crocodiles no longer exist in Bali.
 This species is also reportedly extinct on Lombok, Komodo, and most of Java.
 In the southern Malaysian Peninsula as well as Borneo, salwater crocodiles may co-exist with the relatively narrow-snouted false gharial and the closely related but usually smaller Siamese crocodile.
@@ -106,21 +91,18 @@ A small population may remain within Ujung Kulon National Park in western Java.
 The saltwater crocodile is also present in very limited parts of the South Pacific, with an average population in the Solomon Islands, a very small and soon to be extinct population in Vanuatu and a decent but at-risk population in Palau.
 They once ranged as far west as the east coast of Africa to the Seychelles Islands.
 These crocodiles were once believed to be a population of Nile crocodiles, but they were later proven to be saltwater crocodiles.
- Because of its tendency to travel very long distances at sea, individual saltwater crocodiles have been known to occasionally appear in areas far away from their general range.
+Because of its tendency to travel very long distances at sea, individual saltwater crocodiles have been known to occasionally appear in areas far away from their general range.
 Vagrant individuals have historically been reported on New Caledonia, Fiji, and in Asian waters possibly swam with Kuroshio Current, reaching such as at Iwo Jima, Hachijō-jima, Amami Ōshima, Iriomote-jima, pelagic watetrs off Shima, Mie, Miura Peninsula, and even in the relatively frigid Sea of Japan.
 In late 2008-early 2009, a handful of wild saltwater crocodiles were verified to be living within the river systems of Fraser Island, hundreds of kilometres from, and in much cooler water than, their normal Queensland range.
 These crocodiles did indeed migrate south to the island from northern Queensland during the warmer wet season and presumably returned to the north upon the seasonal temperature drop.
 Despite the surprise and shock within the Fraser Island public, this is apparently not new behaviour, and in the distant past, wild crocodiles had been reported occasionally appearing as far south as Brisbane during the warmer wet season.
- Saltwater crocodiles generally spend the tropical wet season in freshwater swamps and rivers, moving downstream to estuaries in the dry season, and sometimes travelling far out to sea.
+Saltwater crocodiles generally spend the tropical wet season in freshwater swamps and rivers, moving downstream to estuaries in the dry season, and sometimes travelling far out to sea.
 Crocodiles compete fiercely with each other for territory, with dominant males in particular occupying the most eligible stretches of freshwater creeks and streams.
 Junior crocodiles are thus forced into the more marginal river systems and sometimes into the ocean.
 This explains the large distribution of the animal, as well as its being found in the odd places on occasion.
 Like all crocodiles, they can survive for prolonged periods only in warm temperatures, and crocodiles seasonally vacate parts of Australia if cold spells hit.
- 
-
-Biology and behaviour
-
-  The primary behaviour to distinguish the saltwater crocodile from other crocodiles is its tendency to occupy salt water.
+<header>Biology and behaviour
+The primary behaviour to distinguish the saltwater crocodile from other crocodiles is its tendency to occupy salt water.
 Though other crocodiles also have salt glands that enable them to survive in saltwater, a trait which alligators do not possess, most other species do not venture out to sea except during extreme conditions.
 The only other species to display regular seagoing behaviour is the American crocodile, but the American version is still not considered to be as marine-prone as the saltwater crocodile.
 As its alternate name "sea-going crocodile" implies, this species travels between areas separated by sea, or simply relies on the relative ease of travelling through water in order to circumvent long distances on the same land mass, such as Australia.
@@ -130,34 +112,31 @@ Another specimen, a 4.84 meters -long male, travelled 411 kilometers in 20 days.
 Without having to move around much, sometimes simply by floating, the current-riding behaviour allows for the conservation of energy.
 They will even interrupt their travels, residing in sheltered bays for a few days, when the current is against the desired direction of travel, until the current changes direction.
 Crocodiles also travel up and down in river systems, periodically.
- While most crocodilians are social animals sharing basking spots and food, saltwater crocodiles are more territorial and are less tolerant of their own kind; adult males will share territory with females, but drive off rival males.
+While most crocodilians are social animals sharing basking spots and food, saltwater crocodiles are more territorial and are less tolerant of their own kind; adult males will share territory with females, but drive off rival males.
 Saltwater crocodiles mate in the wet season, laying eggs in a nest consisting of a mound of mud and vegetation.
 The female guards the nest and hatchlings from predators.
- Generally very lethargic, a trait which helps it survive months at a time without food, the saltwater crocodile will usually loiter in the water or bask in the sun during much of the day, preferring to hunt at night.
+Generally very lethargic, a trait which helps it survive months at a time without food, the saltwater crocodile will usually loiter in the water or bask in the sun during much of the day, preferring to hunt at night.
 A study of seasonal saltwater crocodile behaviour in Australia indicated that they are more active and more likely to spend time in the water during the Australian summer; conversely, they are less active and spend relatively more time basking in the sun during the winter.
 Saltwater crocodiles, however, are among the most active of all crocodilians, spending more time cruising and active, especially in water.
 They are much less terrestrial than most species of crocodiles, spending less time on land except for basking.
 At times, they tend to spend weeks at sea in search of land and in some cases, barnacles have been observed growing on crocodile scales, indicative of the long periods they spend at sea.
- Despite their relative lethargy, saltwater crocodiles are agile predators and display surprising agility and speed when necessary, usually during strikes at prey.
+Despite their relative lethargy, saltwater crocodiles are agile predators and display surprising agility and speed when necessary, usually during strikes at prey.
 They are capable of explosive bursts of speed when launching an attack from the water.
 They can also swim at 15 to 18 miles per hour in short bursts, around three times as fast as the fastest human swimmers, but when cruising, they usually go at 2 to 3 miles per hour.
 However, stories of crocodiles being faster than a race horse for short distances across land are little more than urban legend.
 At the water's edge, however, where they can combine propulsion from both feet and tail, their speed can be explosive.
- While crocodilian brains are much smaller than those of mammals, saltwater crocodiles are capable of learning difficult tasks with very little conditioning, learning to track the migratory route of their prey as the seasons change, and may possess a deeper communication ability than currently accepted.
-  
-
-Hunting and diet
-
-  Like most crocodilians, saltwater crocodiles are not fastidious in their choice of food, and readily vary their prey selection according to availability, nor are they voracious, as they are able to survive on relatively little food for a prolonged period.
+While crocodilian brains are much smaller than those of mammals, saltwater crocodiles are capable of learning difficult tasks with very little conditioning, learning to track the migratory route of their prey as the seasons change, and may possess a deeper communication ability than currently accepted.
+<subheader>Hunting and diet
+Like most crocodilians, saltwater crocodiles are not fastidious in their choice of food, and readily vary their prey selection according to availability, nor are they voracious, as they are able to survive on relatively little food for a prolonged period.
 Because of their size and distribution, saltwater crocodiles hunt the broadest range of prey species of any modern crocodilian.
 The diet of hatchling, juvenile and subadult saltwater crocodiles has been subject to extensively greater scientific study than that of fully-grown crocodiles, in large part due to the aggression, territoriality and size of adults which make them difficult for biologists to handle without significant risk to safety, for both humans and the crocodiles themselves; the main method used for capturing adult saltwater crocodiles is a huge pole with large hooks meant for shark capture which restrict the crocodile's jaws but can cause damage to their snouts and even this is unproven to allow successful capture for crocodiles in excess of 4 meters.
 While for example 20th century biological studies rigorously cataloged the stomach contents of "sacrificed" adult Nile crocodiles in Africa, few such studies were done on behalf of saltwater crocodiles despite the plethora that were slaughtered due to the leather trade during that time period.
 Therefore, the diet of adults is more likely to be based on reliable eye-witness accounts.
- Hatchlings are restricted to feeding on smaller animals, such as small fish, frogs, insects and small aquatic invertebrates.
+Hatchlings are restricted to feeding on smaller animals, such as small fish, frogs, insects and small aquatic invertebrates.
 In addition to these prey, juveniles also take a variety of freshwater and saltwater fish, various amphibians, crustaceans, molluscs, such as large gastropods and cephalopods, birds, small to medium-sized mammals, and other reptiles, such as snakes and lizards.
 When crocodiles obtain a length of more than 1.2 m , the significance of small invertebrate prey fades in favor of small vertebrates including fish and smaller mammals and birds.
 The larger the animal grows, the greater the variety of its diet, although relatively small prey are taken throughout its lifetime.
- Among crustacean prey, large mud crabs of the genus Scylla are frequently consumed, especially in mangrove habitats.
+Among crustacean prey, large mud crabs of the genus Scylla are frequently consumed, especially in mangrove habitats.
 Ground-living birds, such as the emu and different kinds of water birds, especially the magpie goose, are the most commonly preyed upon birds, due to the increased chance of encounter.
 Even swift-flying birds and bats may be snatched if close to the surface of water, as well as wading birds while these are patrolling the shore looking for food, even down to the size of a common sandpiper.
 Mammalian prey of juveniles and subadults are usually as large as the smaller species of ungulates, such as the greater mouse-deer and hog deer.
@@ -168,14 +147,14 @@ Studies have shown that unlike freshwater crocodiles saltwater crocodiles are pa
 Large crocodiles, even the oldest males, do not ignore small species, especially those without developed escape abilities, when the opportunity arises.
 On the other hand, sub-adult saltwater crocodiles weighing only 8.7 to 15.8 kilograms have been recorded killing and eating goats  weighing 50 to 92% of their own body mass in Orissa, India, so are capable of attacking large prey from an early age.
 It was found the diet of specimens in juvenile to subadult range, since they feed on any animals up to their own size practically no matter how small, was more diverse than adults who often ignored all prey below a certain size limit.
- Large animals taken by adult crocodiles include deer, such as sambar, wild boar, Malayan tapirs, kangaroos, orangutans, dingos, tigers, and large bovines, such as banteng, water buffalo, and gaur.
-  However, larger animals are only sporadically taken due to the fact only large males typically attack very large prey and large ungulates and other sizeable wild mammals are only sparsely distributed in this species' range, outside of a few key areas such as the Sundarbans.
+Large animals taken by adult crocodiles include deer, such as sambar, wild boar, Malayan tapirs, kangaroos, orangutans, dingos, tigers, and large bovines, such as banteng, water buffalo, and gaur.
+However, larger animals are only sporadically taken due to the fact only large males typically attack very large prey and large ungulates and other sizeable wild mammals are only sparsely distributed in this species' range, outside of a few key areas such as the Sundarbans.
 Off-setting this, goats, water buffalo and wild boar/pigs have been introduced to many of the areas occupied by saltwater crocodiles and returned to feral states to varying degrees and thus can amply support large crocodiles.
 Any type of domestic livestock, such as chicken, sheep, pigs, horses and cattle, and domesticated animals/pets may be eaten given the opportunity.
 As a seagoing species, the saltwater crocodile also preys on a variety of saltwater bony fish and other marine animals, including sea snakes, sea turtles, sea birds, dugongs, rays, and small sharks.
 Most witnessed acts of predation on marine animals have occurred in coastal waters or within sight of land, with female sea turtles and their babies caught during mating season when the turtles are closer to shore and bull sharks being the only largish shark with a strong propensity to patrol brackish and fresh waters.
- However, there is evidence that saltwater crocodile do hunt while out in the open seas, based upon the remains of pelagic fishes that only dwell miles away from land being found in their stomachs.
-  The hunting methods utilized by saltwater crocodiles are indistinct from any other crocodilian, with the hunting crocodile submerging and quietly swimming over to the prey before pouncing upwards striking suddenly.
+However, there is evidence that saltwater crocodile do hunt while out in the open seas, based upon the remains of pelagic fishes that only dwell miles away from land being found in their stomachs.
+The hunting methods utilized by saltwater crocodiles are indistinct from any other crocodilian, with the hunting crocodile submerging and quietly swimming over to the prey before pouncing upwards striking suddenly.
 Unlike some other crocodilians, such as alligators and even Nile crocodiles, they are not known to have hunted on dry land.
 Young saltwater crocodiles are capable of breaching their entire body into their air in a single upward motion while hunting prey that may be perched on low hanging branches.
 While hunting rhesus macaques, crocodiles have been seen to knock the monkeys off a bank by knocking them with their tail, forcing the macaque into water for easy consumption.
@@ -184,22 +163,16 @@ As with other crocodilians, their sharp, peg-like teeth are well-suited to seize
 Small prey are simply swallowed whole, while larger animals are forcibly dragged into deep water and drowned or crushed.
 Large prey is then torn into manageable pieces by "death rolling" or by sudden jerks of the head.
 Occasionally, food items will be stored for later consumption once a crocodile eats its fill, although this can lead to scavenging by interlopers such as monitor lizards.
- 
-
-Bite
-
-  Saltwater crocodiles hold the record for the highest bite force ever recorded in any animal, with a peak bite force of 16,414 N, far surpassing the highest recorded value in the spotted hyena of 4,500 N .
+<subheader>Bite
+Saltwater crocodiles hold the record for the highest bite force ever recorded in any animal, with a peak bite force of 16,414 N, far surpassing the highest recorded value in the spotted hyena of 4,500 N .
 The extraordinary bite of crocodilians is a result of their anatomy.
 The space for the jaw muscle in the skull is very large, which is easily visible from the outside as a bulge at each side.
 The nature of the muscle is extremely stiff, almost as hard as bone to the touch, such that it can appear to be the continuum of the skull.
 Another trait is that most of the muscle in a crocodile's jaw is arranged for clamping down.
 Despite the strong muscles to close the jaw, crocodiles have extremely small and weak muscles to open the jaw.
 The jaws of a crocodile can be securely shut with several layers of duct tape.
- 
-
-Reproduction
-
-  Saltwater crocodiles mate in the wet season, when water levels are at their highest.
+<subheader>Reproduction
+Saltwater crocodiles mate in the wet season, when water levels are at their highest.
 In Australia, the male and female engage in courtship in September and October, and the female lays eggs between November and March.
 It is possible the rising temperatures of the wet season provoke reproductive behaviour in this species.
 While crocodilians generally nest every year, there have been several recorded cases of female saltwater crocodiles nesting only every other year and also records of a female attempting to produce two broods in a single wet season.
@@ -207,7 +180,7 @@ The female selects the nesting site, and both parents will defend the nesting te
 Nests are often in surprisingly exposed location, often in mud with little to no vegetation around and thus limited protection from the sun and wind.
 The nest is a mound of mud and vegetation, usually measuring 175 centimeters long and 53 centimeters high, with an entrance averaging 160 centimeters in diameter.
 Some nests in unlikely habitats have occurred, such as rocky rubble or in a damp low-grass field.
- The female crocodile usually scratches a layer of leaves and other debree around the nest entrance and this covering is reported to produce an "astonishing" amount of warmth for the eggs.
+The female crocodile usually scratches a layer of leaves and other debree around the nest entrance and this covering is reported to produce an "astonishing" amount of warmth for the eggs.
 The female typically lays from 40 to 60 eggs, but some clutches have included up to 90.
 The eggs measure on average 8 by 5 centimeters and weigh 113 grams on average in Australia and 121 grams in India.
 These are relatively small, as the average female saltwater crocodile weighs around five times as much as a freshwater crocodile, but lays eggs that are only about 20% larger in measurement and 40% heavier than those of the smaller species.
@@ -217,7 +190,7 @@ As in all crocodilians, the sex of the hatchlings is determined by temperature.
 at 28–30 degrees all hatchlings will be female, at 30–32 degrees 86% of hatchlings are male, and at 33 or more degrees predominantly female.
 In Australia, goannas commonly eat freshwater crocodile eggs, but are relatively unlikely to eat saltwater crocodile eggs due to the vigilance of the imposing mother, with about 25% of the eggs being lost to goannas.
 A majority of the loss of eggs in the saltwater crocodile occurs due to flooding of the nest hole.
-  As in all crocodilian species, the female saltwater crocodile exhibits a remarkable level of maternal care for a reptile.
+As in all crocodilian species, the female saltwater crocodile exhibits a remarkable level of maternal care for a reptile.
 She excavates the nest in response to "yelping" calls from the hatchlings, and even gently rolls eggs in her mouth to assist hatching.
 The female will then carry the hatchlings to water in her mouth and remains with the young for several months.
 Despite her diligence, losses of baby crocodiles are heavy due to various predators and unrelated crocodiles of their own species.
@@ -230,11 +203,8 @@ Saltwater crocodiles that survive to adulthood can attain a very long lifespan, 
 While adults have no natural predators aside from humans and potentially other saltwater crocodiles, baby saltwater crocodiles may fall prey to monitor lizards, predatory fish, wild boars, rats, various aquatic and raptorial birds, pythons, larger crocodiles, and many other predators.
 Pigs and cattle also occasionally inadvertently trample eggs and nests on occasion and degrade habitat quality where found in numbers.
 Juveniles may also fall prey to tigers and leopards in certain parts of their range, although encounters between these predators are rare and cats are likely to avoid areas with saltwater crocodiles.
- 
-
-Conservation status
-
-  In addition to being hunted for its meat and eggs, the saltwater crocodile has the most commercially valuable skin of any crocodilian; and unregulated hunting during the 20th century caused a dramatic decline in the species throughout its range, with the population in northern Australia reduced 95% by 1971.
+<header>Conservation status
+In addition to being hunted for its meat and eggs, the saltwater crocodile has the most commercially valuable skin of any crocodilian; and unregulated hunting during the 20th century caused a dramatic decline in the species throughout its range, with the population in northern Australia reduced 95% by 1971.
 The years from 1940 to 1970 were the peak of unregulated hunting and may have regionally caused irreparable damage to saltwater crocodile populations.
 The species currently has full legal protection in all Australian states and territories where it is found – Western Australia, Northern Territory and Queensland.
 Illegal hunting still persists in some areas, with protection in some countries being grossly ineffective, and trade is often difficult to monitor and control over such a vast range.
@@ -242,30 +212,24 @@ Despite this, the species has made a dramatic recovery in recent decades.
 Because of its resurgence, the species is considered of minimal concern for extinction.
 However, many areas have not recovered, some population surveys have shown that although young crocodiles are present, fewer than 10% of specimens spotted are in adult size range and no particularly large males, such as Sri Lanka or the Republic of Palau.
 This is indicative of both potential continued persecution and exploitation and a non-recovered breeding population.
- In a more balanced population, such as those from Bhitarkanika National Park or Sabah, Malaysia, 28% and 24.2% of specimens observed were in the adult size range of more than 3 meters.
-  Habitat loss continues to be a major problem.
+In a more balanced population, such as those from Bhitarkanika National Park or Sabah, Malaysia, 28% and 24.2% of specimens observed were in the adult size range of more than 3 meters.
+Habitat loss continues to be a major problem.
 In northern Australia, much of the nesting habitat of the saltwater crocodile is susceptible to trampling by feral water buffalo, although buffalo eradication programs have now reduced this problem considerably.
 Even where large areas of suitable habitat remain, subtle habitat alterations can be a problem, such as in the Andaman Islands, where freshwater areas, used for nesting, are being increasingly converted to human agriculture.
 After the commercial value of crocodile skins waned, perhaps the greatest immediate challenge to implementing conservation efforts has been the occasional danger the species can be to humans and the resulting negative view of the crocodile.
-  
-
-Relationship with humans
-
-  
-
-Attacks on humans
-
-  Of all the crocodilians, the saltwater crocodile has the strongest tendency to treat humans as prey, and has a long history of attacking humans who unknowingly stray into its territory.
+<header>Relationship with humans
+<subheader>Attacks on humans
+Of all the crocodilians, the saltwater crocodile has the strongest tendency to treat humans as prey, and has a long history of attacking humans who unknowingly stray into its territory.
 As a result of its power, intimidating size and speed, survival of a direct predatory attack is unlikely if the crocodile is able to make direct contact.
 By contrast to the American policy of encouraging a certain degree of habitat coexistence with alligators, the only recommended policy for dealing with saltwater crocodiles is to completely avoid their habitat whenever possible, as they are exceedingly aggressive when encroached upon.
- Exact data on attacks are limited outside Australia, where one or two fatal attacks are reported per year.
+Exact data on attacks are limited outside Australia, where one or two fatal attacks are reported per year.
 From 1971 to 2013, the total number of fatalities reported in Australia due to saltwater crocodile attack was 106.
 The low level of attacks may be due to extensive efforts by wildlife officials in Australia to post crocodile warning signs at numerous at-risk billabongs, rivers, lakes and beaches.
 Also, recent, less-publicised attacks have been reported in Borneo, Sumatra, Eastern India, and Burma.
 In Sarawak, Borneo, the average number of fatal attacks is reportedly 2.8 annually for the years from 2000 to 2003.
 In the Northern Territory in Australia, attempts have made to relocate saltwater crocodiles who've displayed aggressive behaviour towards humans but these have proven ineffective as the problem crocodiles are apparently able to find their way back towards their original territories.
 In the Darwin area from 2007–2009, 67–78% of "problem crocodiles" were identified as males.
- Many attacks in areas outside Australia are believed to go unreported, with one study positing up to 20 to 30 attacks occur every year.
+Many attacks in areas outside Australia are believed to go unreported, with one study positing up to 20 to 30 attacks occur every year.
 This number may be conservative in light of several areas where humans and saltwater crocodiles co-exist in relatively undeveloped, low-economy and rural regions, where attacks are likely to go unreported.
 However, claims in the past that saltwater crocodiles are responsible for thousands of human fatalities annually are likely to have been exaggerations and were probably falsified to benefit leather companies, hunting organizations and other sources which may have benefited from maximizing the negative perception of crocodiles for financial gain.
 Although it does not pay to underestimate such a formidable predator, one that has no reason to not view humans as prey, many wild saltwater crocodiles are normally quite wary of humans and will go out of their way to submerge and swim away from them, even in large adult males, if previously subject to harassment or persecution.
@@ -275,29 +239,23 @@ Non-fatal attacks usually involve crocodiles of 3 meters  or less in length.
 Fatal attacks, more likely to be predatory in motivation, commonly involve larger crocodiles with an average estimated size of 4.3 meters.
 Under normal circumstances, Nile crocodiles are believed to be responsible for a considerably greater number of fatal attacks on humans than saltwater crocodiles, but this may have more to do with the fact that many people in Africa tend to rely on riparian areas for their livelihood, which is less prevalent in most of Asia and certainly less so in Australia.
 In the Andaman Islands, the number of fatal attacks on humans has reportedly increased, the reason inferred due to habitat destruction and reduction of natural prey.
- During the Japanese retreat in the Battle of Ramree Island on 19 February 1945, saltwater crocodiles may have been responsible for the deaths of over 400 Japanese soldiers.
+During the Japanese retreat in the Battle of Ramree Island on 19 February 1945, saltwater crocodiles may have been responsible for the deaths of over 400 Japanese soldiers.
 British soldiers encircled the swampland through which the Japanese were retreating, condemning the Japanese to a night in the mangroves, which were home to thousands of saltwater crocodiles.
 Many Japanese soldiers did not survive this night, but their death mainly as a result of crocodile attacks has been doubted.
 Another reported mass attack reportedly involve a cruise in eastern India where a boat accident forced 28 people into the water where they were reportedly consumed by saltwater crocodiles.
 Another notorious crocodile attack was in 1985, on ecofeminist Val Plumwood, who survived the attack.
-  
-
-Cultural references
-
-  According to Wondjina, the mythology of Indigenous Australians, the saltwater crocodile was banished from the fresh water for becoming full of bad spirits and growing too large, unlike the freshwater crocodile, which was somewhat revered.
+<subheader>Cultural references
+According to Wondjina, the mythology of Indigenous Australians, the saltwater crocodile was banished from the fresh water for becoming full of bad spirits and growing too large, unlike the freshwater crocodile, which was somewhat revered.
 As such, Aboriginal rock art depicting the saltwater crocodile is rare, although examples of up to 3,000 years old can be found in caves in Kakadu and Arnhem land, roughly matching the species distribution.
 The species is frequently depicted in contemporary aboriginal art.
- The species is featured on several postage stamps, including an 1894 State of North Borneo 12-cent stamp; a 1948 Australian 2 shilling stamp depicting an aboriginal rock artwork of the species; a 1966 Republic of Indonesia stamp; a 1994 Palau 20-cent stamp; a 1997 Australian 22-cent stamp; and a 2005 1 Malaysian ringgit postage stamp.
- The species has featured in contemporary Australian film and television including the "Crocodile" Dundee series of films and The Crocodile Hunter television series.
+The species is featured on several postage stamps, including an 1894 State of North Borneo 12-cent stamp; a 1948 Australian 2 shilling stamp depicting an aboriginal rock artwork of the species; a 1966 Republic of Indonesia stamp; a 1994 Palau 20-cent stamp; a 1997 Australian 22-cent stamp; and a 2005 1 Malaysian ringgit postage stamp.
+The species has featured in contemporary Australian film and television including the "Crocodile" Dundee series of films and The Crocodile Hunter television series.
 There are now several saltwater crocodile-themed parks in Australia.
- The crocodile is considered to be holy on Timor.
+The crocodile is considered to be holy on Timor.
 According to legend, the island was formed by a giant crocodile.
 The Papuan people have a similar and very involved myth and traditionally the crocodile was described as relative.
- 
-
-Examples of large unconfirmed saltwater crocodiles
-
-  Large saltwater crocodiles have always attracted mainstream attention throughout the ages, and have suffered from all sorts of big fish stories and hunter tales, due to man's desire to find the largest of an any given thing.
+<subheader>Examples of large unconfirmed saltwater crocodiles
+Large saltwater crocodiles have always attracted mainstream attention throughout the ages, and have suffered from all sorts of big fish stories and hunter tales, due to man's desire to find the largest of an any given thing.
 Therefore, the largest size recorded for a saltwater crocodile has always been a subject of considerable controversy.
 The reason behind unverified sizes is either the case of insufficient/inconclusive data or exaggeration from a folkloric point of view.
 This section is dedicated to examples of the largest saltwater crocodiles recorded outside scientific norms measurement and estimation, with the aim of satisfying the public interest without creating data pollution, as well as serving an educational purpose of guiding the reader to separate fact from possible fiction.
