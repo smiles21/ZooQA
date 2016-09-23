@@ -59,8 +59,8 @@ public class ZooQA {
         System.out.println("namely those in the genus Crocodylus.");
 
         System.out.println("\nSimply enter your question into the terminal when");
-        System.out.println("prompted, or enter 'exit' into the prompt to exit");
-        System.out.println("the system.");
+        System.out.println("prompted, or enter an empty query into the prompt to");
+        System.out.println("exit the system.");
 
         System.out.println("************************************************************");
     }
@@ -74,7 +74,7 @@ public class ZooQA {
             System.out.print("\nQuery: ");
             String query = scan.nextLine();
 
-            if(query.equalsIgnoreCase("exit"))
+            if(query.trim().equalsIgnoreCase(""))
                 break;
 
             // Need to add code to parse the query, then pose that question to the knowledge base
