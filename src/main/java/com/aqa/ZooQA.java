@@ -1,6 +1,6 @@
 package com.aqa;
 
-import com.aqa.kb.DocumentStore;
+import com.aqa.kb.KnowledgeBase;
 
 import java.util.Scanner;
 
@@ -10,44 +10,46 @@ import java.util.Scanner;
  */
 public class ZooQA {
 
-    /*
+    /**
      * Flag for displaying more than the standard information
      */
     private boolean explicit;
 
-    /*
+    /**
      * Flag for displaying statistics and counts throughout the pipeline
      */
     private boolean stats;
 
-    /*
+    /**
      * The DocumentStore for all the documents in the corpus
      */
-    private DocumentStore docStore;
+    private KnowledgeBase knowledgeBase;
 
     public ZooQA(boolean explicit, boolean stats) {
         this.explicit = explicit;
         this.stats = stats;        
 
-
         printIntro();
+        pressEnterToContinue();
 
         if(explicit)
-            System.out.printf("[DEBUG] Flags: {explicit: %b, stats: %b}\n\n", this.explicit, this.stats);
+            System.out.printf("[EXPLICIT] Flags: {explicit: %b, stats: %b}\n\n", this.explicit, this.stats);
 
         // Need to add corpus creation here
-        docStore = new DocumentStore(this.explicit, this.stats);
-        createCorpus();
+        knowledgeBase = new KnowledgeBase(this.explicit, this.stats);
+        knowledgeBase.createCorpus();
 
 
     }
 
-    private void createCorpus() {
-        System.out.println("Creating Corpus...");
 
-        docStore.loadDocuments();
-
-        System.out.println("Corpus Creation Successful");
+    private void pressEnterToContinue() {
+        System.out.print("Press Enter to continue...");
+        try {
+            System.in.read();
+            System.out.println();
+        }
+        catch(Exception e) {}
     }
 
     private void printIntro() {
