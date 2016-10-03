@@ -44,13 +44,13 @@ public class KnowledgeBase {
         this.explicit = explicit;
         this.stats = stats;
 
-        docStore = new DocumentStore(this.explicit, this.stats);
+//        docStore = new DocumentStore(this.explicit, this.stats);
         tripleStore = new TripleStore(this.explicit, this.stats);
     }
 
     public void createCorpus() { 
         System.out.println("Creating Corpus...");
-        docStore.loadDocuments(filenames);
+//        docStore.loadDocuments(filenames);
         tripleStore.createTriples();
         System.out.println("Corpus Creation Successful");
     }
