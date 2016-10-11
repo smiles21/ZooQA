@@ -1,9 +1,14 @@
 package com.aqa.kb;
 
+import com.aqa.kb.Triple;
+
+import java.io.InputStream;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class TripleStore {
 
@@ -33,6 +38,21 @@ public class TripleStore {
      */
     private String currentSubheader;
 
+/*
+    // Unfortunately had to hard code the file names
+    private String[] filenames = {
+        "/corpus/american-crocodile.txt", "/corpus/cuban-crocodile.txt",
+        "/corpus/freshwater-crocodile.txt", "/corpus/morelets-crocodile.txt",
+        "/corpus/mugger-crocodile.txt", "/corpus/new-guinea-crocodile.txt",
+        "/corpus/nile-crocodile.txt", "/corpus/orinoco-crocodile.txt",
+        "/corpus/phillipine-crocodile.txt", "/corpus/saltwater-crocodile.txt",
+        "/corpus/siamese-crocodile.txt", "/corpus/west-african-crocodile.txt"
+    };
+*/
+
+    // This is just to test the file-reading and knowledge base construction capabilities on only one file.
+    private String[] filenames = {"/corpus/nile-crocodile.txt"};
+
     /**
      * The store of all the triples we are storing.
      *   The primary key is the for all information regarding the key.  
@@ -43,16 +63,29 @@ public class TripleStore {
         this.explicit = explicit;
         this.stats = stats;
 
-        this.tripleMap = new HashMap<String, <Collection<Triple>>();
+        this.tripleMap = new HashMap<String, Collection<Triple>>();
     }
 
     public void createTriples() {
         System.out.print("Creating Triples... ");
 
+        try {
+            for(String filename : filenames) {
+                InputStream in = getClass().getResourceAsStream(filename);
+                Scanner scan = new Scanner(in);
 
-        
+                String currentLine = null;
+                while(scan.hasNextLine()) {
+                    currentLine = scan.nextLine();
+                    System.out.println(currentLine);
+                }
 
-        // If the line has title, header, or subheader info, don't index it.
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+/*        // If the line has title, header, or subheader info, don't index it.
         //  Otherwise, store information from the sentence.
         if(isTaggedLine(currentLine)) {
             if(explicit)
@@ -61,11 +94,10 @@ public class TripleStore {
         else {
             System.out.println("We need to get information from this line");
         }
-
+*/
 
         System.out.println("Triple Creation Complete\n");
-    
-
+    }
 
     /**
      * Checks if line starts with a title, header, or subheader tag.

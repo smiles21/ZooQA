@@ -6,7 +6,7 @@ public class Triple {
 
     Object[] triple;
 
-    private Triple(Stirng key, Stirng relation) {
+    public Triple(String key, String relation) {
         this.triple = new Object[3];
         this.triple[0] = key;
         this.triple[1] = relation;
