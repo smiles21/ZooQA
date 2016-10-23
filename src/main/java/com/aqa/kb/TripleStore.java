@@ -1,6 +1,8 @@
 package com.aqa.kb;
 
+import com.aqa.kb.Document;
 import com.aqa.kb.Triple;
+import com.aqa.extraction.ExtractorCoordinator;
 
 import java.io.InputStream;
 
@@ -24,19 +26,9 @@ public class TripleStore {
     private boolean stats;
 
     /**
-     * The title of the file currently being stored.
+     * The ExtractorCoordinator to extract triples.
      */
-    private String currentTitle;
-
-    /**
-     * The header of the section currently being stored.
-     */
-    private String currentHeader;
-    
-    /**
-     * The subheader of the section of the file currently being stored.
-     */
-    private String currentSubheader;
+    private ExtractorCoordinator extractors;
 
 /*
     // Unfortunately had to hard code the file names
@@ -64,64 +56,12 @@ public class TripleStore {
         this.stats = stats;
 
         this.tripleMap = new HashMap<String, Collection<Triple>>();
+        this.extractors = new ExtractorCoordinator();
     }
 
-    public void createTriples() {
-        System.out.print("Creating Triples... ");
+    public void createTriples(int senctenceNumber, String sentence, Document currentDoc) {
 
-        try {
-            for(String filename : filenames) {
-                InputStream in = getClass().getResourceAsStream(filename);
-                Scanner scan = new Scanner(in);
-
-                String currentLine = null;
-                while(scan.hasNextLine()) {
-                    currentLine = scan.nextLine();
-                    System.out.println(currentLine);
-                }
-
-            }
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-
-/*        // If the line has title, header, or subheader info, don't index it.
-        //  Otherwise, store information from the sentence.
-        if(isTaggedLine(currentLine)) {
-            if(explicit)
-                System.out.printf("[EXPLICIT] Title: %s, Header: %s, Subheader: %s\n", currentTitle, currentHeader, currentSubheader);
-        }
-        else {
-            System.out.println("We need to get information from this line");
-        }
-*/
-
-        System.out.println("Triple Creation Complete\n");
+        extractors.extractRelations(sentence);
     }
 
-    /**
-     * Checks if line starts with a title, header, or subheader tag.
-     *  If so, sets the appropriate instance variables.
-     */
-    private boolean isTaggedLine(String line) {
-        if(line.startsWith("<title>")){
-            currentTitle = line.substring(7);
-            currentHeader = null;
-            currentSubheader = null;
-            return true;
-        }
-        else if(line.startsWith("<header>")){
-            currentHeader = line.substring(8);
-            currentSubheader = null;
-            return true;
-        }
-        else if(line.startsWith("<subheader>")){
-            currentSubheader = line.substring(11);
-            return true;
-        }
-        else {
-            return false;
-        }
-        
-    }
 }

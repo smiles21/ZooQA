@@ -1,10 +1,24 @@
 package com.aqa.kb;
 
-
+import com.aqa.kb.Document;
 
 public class Triple {
 
-    Object[] triple;
+    /**
+     * This is where the stuff is actually stored
+     */
+    private Object[] triple;
+
+    /**
+     * The Document which contains this Triple
+     */
+    private Document containingDoc;
+
+    /**
+     * The sentence number for this Triple.
+     *  Can be used to index the sentence and retrieve the actual text.
+     */
+    private int sentenceIndex;
 
     public Triple(String key, String relation) {
         this.triple = new Object[3];
@@ -12,14 +26,18 @@ public class Triple {
         this.triple[1] = relation;
     }
 
-    public Triple(String key, String relation, double value) {
+    public Triple(String key, String relation, double value, Document doc, int index) {
         this(key, relation);
-        this.triple[2] = value; 
+        this.triple[2] = value;
+        this.containingDoc = doc;
+        this.sentenceIndex = index;
     }
 
-    public Triple(String key, String relation, String value) {
+    public Triple(String key, String relation, String value, Document doc, int index) {
         this(key, relation);
         this.triple[2] = value; 
+        this.containingDoc = doc;
+        this.sentenceIndex = index;
     }
 
     public Object[] getTriple() {

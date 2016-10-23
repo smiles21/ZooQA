@@ -1,5 +1,7 @@
 package com.aqa.kb;
 
+import java.util.ArrayList;
+
 class Document {
     
     /**
@@ -8,13 +10,18 @@ class Document {
     private String title;
 
     /**
-     * The text of the document.
+     * The full text of the document.
      */
     private String text;
-    
-    public Document(String title, String text) {
-        this.title = title;
-        this.text = text;
+
+    /**
+     * The full text of the document, each sentence getting its own index.
+     */
+    private ArrayList<String> sentences;    
+
+
+    public Document() {
+        this.sentences = new ArrayList<String>();
     }
 
     public String getTitle() {
@@ -25,5 +32,20 @@ class Document {
         return this.text;
     }
 
+    public String getSentence(int index) {
+        return this.sentences.get(index);
+    }
+
+    public void setTest(String t) {
+        this.text = t;
+    }
+
+    public void setTitle(String t) {
+        this.title = t;
+    }
+
+    public void addSentence(int index, String s) {
+        this.sentences.add(index, s);
+    }
 
 }

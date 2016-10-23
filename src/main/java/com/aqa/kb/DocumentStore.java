@@ -33,39 +33,7 @@ public class DocumentStore {
         docList = new ArrayList<Document>();
     }
 
-    public void loadDocuments(String[] filenames) {
-        System.out.print("Loading Documents... ");
-
-        try {
-            // Load each file using the ClassLoader
-            ClassLoader classLoader = this.getClass().getClassLoader();
-            for (String filename : filenames){
-                InputStream in = getClass().getResourceAsStream(filename);
-                Scanner scan = new Scanner(in);
-                
-                StringBuilder builder = new StringBuilder();
-                String currentLine = null;
-                String title = null;
-                while(scan.hasNextLine()) {
-                    currentLine = scan.nextLine();
-
-                    if(currentLine.startsWith("<title>"))
-                        title = currentLine.substring(7);
-                    
-                    builder.append(currentLine);
-
-                }
-                docList.add(new Document(title, builder.toString()));
-
-            }
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        System.out.println("Loading Documents Complete\n");
-    
-        if(explicit)
-            System.out.printf("[EXPLICIT] Stored %d documents in the document store \n", docList.size());
+    public void addDocument(Document d) {
+        this.docList.add(d);
     }
-
-
 }
