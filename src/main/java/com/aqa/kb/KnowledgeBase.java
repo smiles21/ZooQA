@@ -78,16 +78,20 @@ public class KnowledgeBase {
                 Document currentDoc = new Document();
                 String currentLine = null;
                 int sentenceNumber = 0;
+
                 while(scan.hasNextLine()) {
                     currentLine = scan.nextLine();
                     if(!isTitleLine(currentLine)
                         || !isHeaderLine(currentLine)
                         || !isSubheaderLine(currentLine)) {
+
+                        if(currentLine.contains("5 meters")){
                         
-                        this.tripleStore.createTriples(sentenceNumber, currentLine, currentDoc);
-                        currentDoc.addSentence(sentenceNumber, currentLine);
-                       // System.out.println(currentLine);
-                        ++sentenceNumber;
+                            this.tripleStore.createTriples(sentenceNumber, currentLine, currentDoc);
+                            currentDoc.addSentence(sentenceNumber, currentLine);
+                           // System.out.println(currentLine);
+                            ++sentenceNumber;
+                        }
                     }
                 }
                 this.docStore.addDocument(currentDoc);
