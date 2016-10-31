@@ -18,7 +18,7 @@ public class Triple {
      * The sentence number for this Triple.
      *  Can be used to index the sentence and retrieve the actual text.
      */
-    private int sentenceIndex;
+    private int sentenceNumber;
 
     public Triple(String key, String relation) {
         this.triple = new Object[3];
@@ -26,22 +26,34 @@ public class Triple {
         this.triple[1] = relation;
     }
 
-    public Triple(String key, String relation, double value, Document doc, int index) {
+    public Triple(String key, String relation, double value, Document doc, int num) {
         this(key, relation);
         this.triple[2] = value;
         this.containingDoc = doc;
-        this.sentenceIndex = index;
+        this.sentenceNumber = num;
     }
 
-    public Triple(String key, String relation, String value, Document doc, int index) {
+    public Triple(String key, String relation, String value, Document doc, int num) {
         this(key, relation);
         this.triple[2] = value; 
         this.containingDoc = doc;
-        this.sentenceIndex = index;
+        this.sentenceNumber = num;
+    }
+
+    public Document getDocument() {
+        return this.containingDoc;
+    }
+
+    public int getSentenceNumber() {
+        return this.sentenceNumber;
     }
 
     public Object[] getTriple() {
-        return triple;
+        return this.triple;
+    }
+
+    public String toString() {
+        return "[" + this.triple[0] + ", " + this.triple[1] + ", " + this.triple[2] + "]";
     }
 
 }

@@ -30,7 +30,7 @@ public class ZooQA {
         this.stats = stats;        
 
         printIntro();
-        pressEnterToContinue();
+        ZooQA.pressEnterToContinue();
 
         if(explicit)
             System.out.printf("[EXPLICIT] Flags: {explicit: %b, stats: %b}\n\n", this.explicit, this.stats);
@@ -43,7 +43,7 @@ public class ZooQA {
     }
 
 
-    private void pressEnterToContinue() {
+    public static void pressEnterToContinue() {
         System.out.print("Press Enter to continue...");
         try {
             System.in.read();

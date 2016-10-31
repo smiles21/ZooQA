@@ -2,7 +2,7 @@ package com.aqa.kb;
 
 import java.util.ArrayList;
 
-class Document {
+public class Document {
     
     /**
      * The title of the document.

@@ -59,9 +59,9 @@ public class TripleStore {
         this.extractors = new ExtractorCoordinator();
     }
 
-    public void createTriples(int senctenceNumber, String sentence, Document currentDoc) {
+    public void createTriples(int sentenceNumber, String sentence, Document currentDoc) {
 
-        extractors.extractRelations(sentence);
+        extractors.extractRelations(sentenceNumber, sentence, currentDoc);
     }
 
 }

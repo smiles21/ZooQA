@@ -85,7 +85,7 @@ public class KnowledgeBase {
                         || !isHeaderLine(currentLine)
                         || !isSubheaderLine(currentLine)) {
 
-                        if(currentLine.contains("5 meters")){
+                        if(currentLine.contains("kilograms")){
                         
                             this.tripleStore.createTriples(sentenceNumber, currentLine, currentDoc);
                             currentDoc.addSentence(sentenceNumber, currentLine);
