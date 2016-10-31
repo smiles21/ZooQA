@@ -44,7 +44,7 @@ public class KnowledgeBase {
      */
     private TripleStore tripleStore;
 
-/*
+
     // Unfortunately had to hard code the file names
     private String[] filenames = {
         "/corpus/american-crocodile.txt", "/corpus/cuban-crocodile.txt",
@@ -54,10 +54,10 @@ public class KnowledgeBase {
         "/corpus/phillipine-crocodile.txt", "/corpus/saltwater-crocodile.txt",
         "/corpus/siamese-crocodile.txt", "/corpus/west-african-crocodile.txt"
     };
-*/
+
 
     // This is just to test the file-reading and knowledge base construction capabilities on only one file.
-    private String[] filenames = {"/corpus/nile-crocodile.txt"};
+   // private String[] filenames = {"/corpus/nile-crocodile.txt"};
 
     public KnowledgeBase(boolean explicit, boolean stats) {
         this.explicit = explicit;
@@ -81,7 +81,9 @@ public class KnowledgeBase {
 
                 while(scan.hasNextLine()) {
                     currentLine = scan.nextLine();
-                    if(!isTitleLine(currentLine)
+                    if(isTitleLine(currentLine))
+                        currentDoc.setTitle(currentLine.substring(7));
+                    else if(!isTitleLine(currentLine)
                         || !isHeaderLine(currentLine)
                         || !isSubheaderLine(currentLine)) {
 
@@ -89,7 +91,6 @@ public class KnowledgeBase {
                         
                             this.tripleStore.createTriples(sentenceNumber, currentLine, currentDoc);
                             currentDoc.addSentence(sentenceNumber, currentLine);
-                           // System.out.println(currentLine);
                             ++sentenceNumber;
                         }
                     }
@@ -100,6 +101,9 @@ public class KnowledgeBase {
         } catch(Exception e) {
             e.printStackTrace();
         }
+
+        if(explicit)
+            this.tripleStore.printStore();
 
         System.out.println("Corpus Creation Successful");
 

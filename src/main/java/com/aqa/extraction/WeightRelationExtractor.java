@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-    public class WeightRelationExtractor implements RelationExtractor {
+    public class WeightRelationExtractor extends RelationExtractor {
 
         public List<String> weightWords;
 
@@ -30,15 +30,13 @@ import java.util.List;
         ArrayList<Triple> triples = new ArrayList<Triple>();
 
         // This needs to be changed somehow.  Perhaps just use the title of the article?
-        String subject = "Nile Crocodile";
+        String subject = currentDoc.getTitle();
 
         List<String> words   = sentence.words();
-        List<String> nerTags = sentence.nerTags();
         List<String> lemmas  = sentence.lemmas();
       
         for(String phrase : WEIGHT_PHRASES){
             int indexOfPhrase = indexOfPhrase(words, Arrays.asList(phrase.split(" ")));
-            System.out.println(phrase + " " + indexOfPhrase);
             // We have a phrase in the sentence
             if(indexOfPhrase != -1){
                 
@@ -47,7 +45,6 @@ import java.util.List;
                   indexOfWeightWord < lemmas.size() && indexOfWeightWord < indexOfPhrase+6;
                   indexOfWeightWord++)
                 {
-                    System.out.println("lemma: " + lemmas.get(indexOfWeightWord));
                     // If we have a weight word, add the entire string to 
                     if(weightWords.contains(lemmas.get(indexOfWeightWord))){
                         String value = createStringFromList(words.subList(indexOfPhrase, indexOfWeightWord + 1));
@@ -61,36 +58,5 @@ import java.util.List;
         return triples;
     }
 
-    // Take all strings in list and build them into one string
-    private String createStringFromList(List<String> words){
-        StringBuilder sb = new StringBuilder();
-        for(String s : words)
-            sb.append(s + " ");
-        return sb.toString();
-    }
-
-    // Find the index of the phrase in words
-    private int indexOfPhrase(List<String> words, List<String> phrase){
-        int index = -1;
-        int wordsSize = words.size();
-        int phraseSize = phrase.size();
-
-        for(int i = 0; i < wordsSize - phraseSize; i++){
-            if(words.get(i).equals(phrase.get(0))){
-                boolean flag = true;
-                for(int j = 0; j < phraseSize; j++){
-                    if(!words.get(j + i).equals(phrase.get(j))){
-                        flag = false;
-                        break;
-                    }
-                }
-                if(flag){
-                    index = i;
-                    break;
-                }
-            }
-        }
-        return index;
-    }
 
 }

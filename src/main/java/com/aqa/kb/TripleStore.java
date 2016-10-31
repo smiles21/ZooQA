@@ -7,6 +7,7 @@ import com.aqa.extraction.ExtractorCoordinator;
 import java.io.InputStream;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,6 +31,12 @@ public class TripleStore {
      */
     private ExtractorCoordinator extractors;
 
+    /**
+     * The store of all the triples we are storing.
+     *   The primary key is the for all information regarding the key.  
+     */
+    private Map<String, Collection<Triple>> tripleMap;
+
 /*
     // Unfortunately had to hard code the file names
     private String[] filenames = {
@@ -45,12 +52,6 @@ public class TripleStore {
     // This is just to test the file-reading and knowledge base construction capabilities on only one file.
     private String[] filenames = {"/corpus/nile-crocodile.txt"};
 
-    /**
-     * The store of all the triples we are storing.
-     *   The primary key is the for all information regarding the key.  
-     */
-    private Map<String, Collection<Triple>> tripleMap;
-
     public TripleStore(boolean explicit, boolean stats) {
         this.explicit = explicit;
         this.stats = stats;
@@ -61,7 +62,30 @@ public class TripleStore {
 
     public void createTriples(int sentenceNumber, String sentence, Document currentDoc) {
 
-        extractors.extractRelations(sentenceNumber, sentence, currentDoc);
+        ArrayList<Triple> triples = extractors.extractRelations(sentenceNumber, sentence, currentDoc);
+
+        for(Triple t : triples){
+            if(explicit)
+                System.out.println("[EXPLICIT]: " + t);
+
+            Object[] o = t.getTriple();
+            Collection<Triple> coll = tripleMap.get((String) o[0]);
+            // If we don't have a Colelction, create one
+            if(coll == null)
+                coll = new ArrayList<Triple>();
+            coll.add(t);
+            tripleMap.put((String) o[0], coll);
+        }
+ 
     }
 
+    public void printStore() {
+        for(String key : tripleMap.keySet()) {
+            System.out.println("\nKey: " + key + "\n[");
+            for(Triple t : tripleMap.get(key))
+                System.out.println(" " + t);
+            System.out.println("]");
+        }
+    }
+    
 }

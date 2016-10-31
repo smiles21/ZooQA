@@ -36,7 +36,7 @@ public class Document {
         return this.sentences.get(index);
     }
 
-    public void setTest(String t) {
+    public void setText(String t) {
         this.text = t;
     }
 
