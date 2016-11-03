@@ -60,7 +60,7 @@ public class LocationRelationExtractor extends RelationExtractor {
                         ++currIndex;
                     }
                     // If the last "word" in the list is a comma, remove it.
-                    if(words.get(currIndex-1).equals(","))
+                    if(words.get(currIndex-1).equals(",") || words.get(currIndex-1).equals("and"))
                         --currIndex;
                     
                     // Create the Triple and add it to the returned Triples

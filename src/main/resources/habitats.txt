@@ -1,3 +1,5 @@
+delta
+deltas
 lakes
 lake
 rivers
