@@ -34,7 +34,8 @@ import java.util.List;
 
         List<String> words   = sentence.words();
         List<String> lemmas  = sentence.lemmas();
-      
+
+        // Check if any of the key phrases exist in the sentence      
         for(String phrase : LENGTH_PHRASES){
             int indexOfPhrase = indexOfPhrase(words, Arrays.asList(phrase.split(" ")));
             // We have a phrase in the sentence
@@ -45,10 +46,10 @@ import java.util.List;
                   indexOfLengthWord < lemmas.size() && indexOfLengthWord < indexOfPhrase+8;
                   indexOfLengthWord++)
                 {
-                    // If we have a length word, add the entire string to 
+                    // If we have a length word, add the entire string to the value of the Triple 
                     if(lengthWords.contains(lemmas.get(indexOfLengthWord))){
                         String value = createStringFromList(words.subList(indexOfPhrase, indexOfLengthWord + 1));
-                        Triple trip = new Triple(subject, "Length", value, currentDoc, sentenceNumber);
+                        Triple trip = new Triple(subject, "has-length", value, currentDoc, sentenceNumber);
                         triples.add(trip);
                     }
                 }

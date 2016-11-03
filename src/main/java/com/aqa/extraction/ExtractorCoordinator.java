@@ -1,6 +1,6 @@
 package com.aqa.extraction;
 
-import com.aqa.extraction.WeightRelationExtractor;
+import com.aqa.kb.ConceptList;
 import com.aqa.kb.Document;
 import com.aqa.kb.Triple;
 
@@ -18,22 +18,59 @@ public class ExtractorCoordinator {
      */
     private LengthRelationExtractor lengthExtractor;
 
+    /**
+     * A semantic relation extractor for prey.
+     */
+    private PreyRelationExtractor preyExtractor;
+
+    /**
+     * A semantic relation extractor for location.
+     */
+    private LocationRelationExtractor locationExtractor;
+
+    /**
+     * A semantic relation extractor for habitat.
+     */
+    private HabitatRelationExtractor habitatExtractor;
+
+    /**
+     * A list of habitats..
+     */
+    private ConceptList habitatList;
+
     public ExtractorCoordinator() {
         weightExtractor = new WeightRelationExtractor();
         lengthExtractor = new LengthRelationExtractor();
+        preyExtractor = new PreyRelationExtractor();
+        locationExtractor = new LocationRelationExtractor();
+        
+        habitatList = new ConceptList("/habitats.txt");
+        habitatExtractor = new HabitatRelationExtractor(habitatList);
+        
     }
 
     public ArrayList<Triple> extractRelations(int sentenceNumber, String sentence, Document currentDoc){
         ArrayList<Triple> triples = new ArrayList<Triple>();
 
-        ArrayList<Triple> weightRelations = weightExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
-        if(weightRelations.size() > 0)
-            triples.addAll(weightRelations);
+        ArrayList<Triple> extracted = weightExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
+        if(extracted.size() > 0)
+            triples.addAll(extracted);
 
-        ArrayList<Triple> lengthRelations = lengthExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
-        if(lengthRelations.size() > 0)
-            triples.addAll(lengthRelations);
+        extracted = lengthExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
+        if(extracted.size() > 0)
+            triples.addAll(extracted);
 
+        extracted = preyExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
+        if(extracted.size() > 0)
+            triples.addAll(extracted);
+
+        extracted = locationExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
+        if(extracted.size() > 0)
+            triples.addAll(extracted);
+
+        extracted = habitatExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
+        if(extracted.size() > 0)
+            triples.addAll(extracted);
         return triples;
     }
 

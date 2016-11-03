@@ -34,7 +34,8 @@ import java.util.List;
 
         List<String> words   = sentence.words();
         List<String> lemmas  = sentence.lemmas();
-      
+
+        // Check if any of the key phrases are present in the sentence      
         for(String phrase : WEIGHT_PHRASES){
             int indexOfPhrase = indexOfPhrase(words, Arrays.asList(phrase.split(" ")));
             // We have a phrase in the sentence
@@ -45,10 +46,10 @@ import java.util.List;
                   indexOfWeightWord < lemmas.size() && indexOfWeightWord < indexOfPhrase+6;
                   indexOfWeightWord++)
                 {
-                    // If we have a weight word, add the entire string to 
+                    // If we have a weight word, add the entire string to value of the Triple
                     if(weightWords.contains(lemmas.get(indexOfWeightWord))){
                         String value = createStringFromList(words.subList(indexOfPhrase, indexOfWeightWord + 1));
-                        Triple trip = new Triple(subject, "Weight", value, currentDoc, sentenceNumber);
+                        Triple trip = new Triple(subject, "has-weight", value, currentDoc, sentenceNumber);
                         triples.add(trip);
                     }
                 }

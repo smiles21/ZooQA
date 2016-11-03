@@ -1,0 +1,43 @@
+lakes
+lake
+rivers
+river
+ponds
+pond
+streams
+stream
+wetlands
+wetland
+marsh
+marshes
+swamp
+swamps
+oceans
+ocean
+coast
+coasts
+coastlines
+coastline
+estuary
+estuaries
+coral reef
+coral reefs
+desert
+deserts
+tropical rainforests
+tropical rainforest
+temperate forest
+temperate forests
+temperate rainforest
+temperate rainforests
+boreal forest
+boreal forests
+taiga
+savanna
+savannas
+temperate grassland
+temperate grasslands
+plains
+plain
+tundra
+tundras

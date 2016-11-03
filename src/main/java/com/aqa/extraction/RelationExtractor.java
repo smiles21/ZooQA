@@ -10,10 +10,18 @@ public abstract class RelationExtractor implements RelationExtractorInterface {
     // Take all strings in list and build them into one string
     protected String createStringFromList(List<String> words){
         StringBuilder sb = new StringBuilder();
-        for(String s : words)
-            sb.append(s + " ");
-        String retVal = sb.toString();
-        return retVal.substring(0, retVal.length() - 1);
+        
+        // Add the first element of the list, and remove it
+        sb.append(words.get(0));
+        
+        for(String s : words.subList(1, words.size())){
+            if(s.equals(","))
+                sb.append(s);
+            else
+                sb.append(" " + s);
+        }
+        
+        return sb.toString();
     }
 
     // Find the index of the phrase in words

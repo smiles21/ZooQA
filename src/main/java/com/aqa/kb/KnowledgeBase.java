@@ -44,7 +44,7 @@ public class KnowledgeBase {
      */
     private TripleStore tripleStore;
 
-
+/*
     // Unfortunately had to hard code the file names
     private String[] filenames = {
         "/corpus/american-crocodile.txt", "/corpus/cuban-crocodile.txt",
@@ -54,10 +54,10 @@ public class KnowledgeBase {
         "/corpus/phillipine-crocodile.txt", "/corpus/saltwater-crocodile.txt",
         "/corpus/siamese-crocodile.txt", "/corpus/west-african-crocodile.txt"
     };
-
+*/
 
     // This is just to test the file-reading and knowledge base construction capabilities on only one file.
-   // private String[] filenames = {"/corpus/nile-crocodile.txt"};
+    private String[] filenames = {"/corpus/nile-crocodile.txt"};
 
     public KnowledgeBase(boolean explicit, boolean stats) {
         this.explicit = explicit;
@@ -86,13 +86,10 @@ public class KnowledgeBase {
                     else if(!isTitleLine(currentLine)
                         || !isHeaderLine(currentLine)
                         || !isSubheaderLine(currentLine)) {
-
-                        if(currentLine.contains("kilograms")){
                         
-                            this.tripleStore.createTriples(sentenceNumber, currentLine, currentDoc);
-                            currentDoc.addSentence(sentenceNumber, currentLine);
-                            ++sentenceNumber;
-                        }
+                        this.tripleStore.createTriples(sentenceNumber, currentLine, currentDoc);
+                        currentDoc.addSentence(sentenceNumber, currentLine);
+                        ++sentenceNumber;
                     }
                 }
                 this.docStore.addDocument(currentDoc);
