@@ -5,6 +5,7 @@ import com.aqa.kb.DocumentStore;
 import com.aqa.kb.TripleStore;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -83,9 +84,13 @@ public class KnowledgeBase {
                 Scanner scan = new Scanner(in);
 
                 Document currentDoc = new Document();
+                this.docStore.addDocument(currentDoc);
                 String currentLine = null;
                 int sentenceNumber = 0;
 
+                if(explicit)
+                    System.out.println("[EXPLICIT] Extracting Triples from " + filename);
+ 
                 while(scan.hasNextLine()) {
                     currentLine = scan.nextLine();
                     if(isTitleLine(currentLine))
@@ -99,7 +104,6 @@ public class KnowledgeBase {
                         ++sentenceNumber;
                     }
                 }
-                this.docStore.addDocument(currentDoc);
 
             }
         } catch(Exception e) {
@@ -120,6 +124,17 @@ public class KnowledgeBase {
 
     public HashSet<String> getSubjects() {
         return subjects;
+    }
+
+    public ArrayList<Triple> getResultTriples(String subject, String relation) {
+        ArrayList<Triple> results = new ArrayList<Triple>();
+
+        for(Triple t : this.tripleStore.getTriplesOfSubject(subject)){
+            if(t.hasRelation(relation))
+                results.add(t);
+        }
+        
+        return results;
     }
 
     /**

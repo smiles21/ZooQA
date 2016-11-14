@@ -40,6 +40,14 @@ public class Triple {
         this.sentenceNumber = num;
     }
 
+    public boolean hasSubject(String subject) {
+        return triple[0].equals(subject);
+    }
+    
+    public boolean hasRelation(String relation) {
+        return triple[1].equals(relation);
+    }
+
     public Document getDocument() {
         return this.containingDoc;
     }

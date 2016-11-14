@@ -1,10 +1,12 @@
 package com.aqa;
 
 import com.aqa.kb.KnowledgeBase;
+import com.aqa.kb.Triple;
 import com.aqa.scoring.LAT;
 import com.aqa.scoring.LATPredictor;
 import com.aqa.scoring.TripleScorer;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -37,7 +39,6 @@ public class ZooQA {
         if(explicit)
             System.out.printf("[EXPLICIT] Flags: {explicit: %b, stats: %b}\n\n", this.explicit, this.stats);
 
-        // Need to add corpus creation here
         knowledgeBase = new KnowledgeBase(this.explicit, this.stats);
         knowledgeBase.createCorpus();
 
@@ -91,13 +92,17 @@ public class ZooQA {
                 }
             }
 
-            if(lat != null)
-                System.out.println(subject + " " + lat.relation()); 
-
             // Put in code to grab all Triples from the KB with the 
-            //  subject and relation in it.  
+            //  subject and relation in it.
 
+            ArrayList<Triple> tripleResults = this.knowledgeBase.getResultTriples(subject, lat.relation());
 
+            if(tripleResults.size() > 0){
+                for(Triple t : tripleResults)
+                    System.out.println(t);
+            } else {
+                System.out.println("No triples about that.");
+            }
 
         } while(true);
 

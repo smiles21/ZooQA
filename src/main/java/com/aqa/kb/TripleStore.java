@@ -65,8 +65,6 @@ public class TripleStore {
         ArrayList<Triple> triples = extractors.extractRelations(sentenceNumber, sentence, currentDoc);
 
         for(Triple t : triples){
-            if(explicit)
-                System.out.println("[EXPLICIT]: " + t);
 
             Object[] o = t.getTriple();
             Collection<Triple> coll = tripleMap.get((String) o[0]);
@@ -77,6 +75,10 @@ public class TripleStore {
             tripleMap.put((String) o[0], coll);
         }
  
+    }
+
+    public Collection<Triple> getTriplesOfSubject(String subject) {
+        return tripleMap.get(subject);
     }
 
     public Map<String, Collection<Triple>> getStore() {
