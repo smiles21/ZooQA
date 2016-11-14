@@ -15,13 +15,12 @@ import java.util.List;
 
         public List<String> lengthWords;
 
-        public final String[] LENGTH_PHRASES = {"up to", "average", "between", "as much as", "averages", "measures", "measure", "length", "lengths"};
+        public final String[] LENGTH_PHRASES = {"up to", "average", "between", "as much as", "averages", "measures", "measure", "length", "lengths", "size", "sizes", "grow to", "grows to"};
 
         public LengthRelationExtractor() {
-            System.out.println("LengthRelationExtractor created.");
             String[] arr = {"meters", "meter", "foot", "feet"};
             lengthWords = Arrays.asList(arr);
-            System.out.println("LengthWords: " + lengthWords);
+            System.out.println("LengthRelationExtractor created.");
         }
 
     public ArrayList<Triple> extractRelations(int sentenceNumber, String s, Document currentDoc) {

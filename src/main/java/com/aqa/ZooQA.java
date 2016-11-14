@@ -1,12 +1,14 @@
 package com.aqa;
 
 import com.aqa.kb.KnowledgeBase;
+import com.aqa.scoring.LAT;
+import com.aqa.scoring.LATPredictor;
+import com.aqa.scoring.TripleScorer;
 
 import java.util.Scanner;
 
 /**
  * ZooQA ("Zoo-Kah")
- *
  */
 public class ZooQA {
 
@@ -42,7 +44,6 @@ public class ZooQA {
 
     }
 
-
     public static void pressEnterToContinue() {
         System.out.print("Press Enter to continue...");
         try {
@@ -70,7 +71,8 @@ public class ZooQA {
     public void promptQuery() {
 
         Scanner scan = new Scanner(System.in);
-        
+        TripleScorer tripleScorer = new TripleScorer();        
+
         do {
             
             System.out.print("\nQuery: ");
@@ -79,8 +81,23 @@ public class ZooQA {
             if(query.trim().equalsIgnoreCase(""))
                 break;
 
-            // Need to add code to parse the query, then pose that question to the knowledge base
-            System.out.printf("You entered: '%s'\n", query);
+            LAT lat = LATPredictor.predictLAT(query);
+
+            String subject = null;
+            for(String s : this.knowledgeBase.getSubjects()){
+                if(query.toUpperCase().contains(s.toUpperCase())){
+                    subject = s;
+                    break;
+                }
+            }
+
+            if(lat != null)
+                System.out.println(subject + " " + lat.relation()); 
+
+            // Put in code to grab all Triples from the KB with the 
+            //  subject and relation in it.  
+
+
 
         } while(true);
 

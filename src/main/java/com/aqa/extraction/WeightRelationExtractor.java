@@ -15,13 +15,12 @@ import java.util.List;
 
         public List<String> weightWords;
 
-        public final String[] WEIGHT_PHRASES = {"up to", "average", "between", "as much as", "averages", "weighs", "weigh"};
+        public final String[] WEIGHT_PHRASES = {"up to", "average", "between", "as much as", "averages", "weighs", "weigh", "size", "sizes", "grow to", "grows to"};
 
         public WeightRelationExtractor() {
-            System.out.println("WeightRelationExtractor created.");
             String[] arr = {"pound", "pounds", "kilograms", "kilogram", "ton", "tons", "tonnes"};
             weightWords = Arrays.asList(arr);
-            System.out.println("WeightWords: " + weightWords);
+            System.out.println("WeightRelationExtractor created.");
         }
 
     public ArrayList<Triple> extractRelations(int sentenceNumber, String s, Document currentDoc) {

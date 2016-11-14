@@ -39,34 +39,39 @@ public class LocationRelationExtractor extends RelationExtractor {
             // We have a phrase in the sentence
             if(indexOfPhrase != -1) {
                 
-                boolean locationInSixWords = false;
-                // See if a location word appears after the phrase, but within 6 words
+                boolean locationInEightWords = false;
+                // See if a location word appears after the phrase, but within 8 words
                 for(int indexOfLocationWord = indexOfPhrase;
-                  indexOfLocationWord < lemmas.size() && indexOfLocationWord < indexOfPhrase+6;
+                  indexOfLocationWord < lemmas.size() && indexOfLocationWord < indexOfPhrase+8;
                   indexOfLocationWord++)
                 {
-                    if(nerTags.get(indexOfLocationWord).equals("LOCATION")){
-                        locationInSixWords = true;
+                    if(nerTags.get(indexOfLocationWord).equalsIgnoreCase("LOCATION")){
+                        locationInEightWords = true;
                         break;
                     }
                 }
-                // The NER has found a LOCATION within 6 words of our phrase
-                if(locationInSixWords){
+                // The NER has found a LOCATION within 8 words of our phrase
+                if(locationInEightWords){
                     int currIndex = indexOfPhrase + phraseAsList.size();
-                    while(nerTags.get(currIndex).equals("LOCATION")
-                            || words.get(currIndex).equals(",")
-                            || words.get(currIndex).equals("and"))
+                    while(nerTags.get(currIndex).equalsIgnoreCase("LOCATION")
+                            || words.get(currIndex).equalsIgnoreCase("the")
+                            || words.get(currIndex).equalsIgnoreCase(",")
+                            || words.get(currIndex).equalsIgnoreCase("and"))
                     {
                         ++currIndex;
                     }
-                    // If the last "word" in the list is a comma, remove it.
-                    if(words.get(currIndex-1).equals(",") || words.get(currIndex-1).equals("and"))
+                    // If the last word is a comma, "and", or "the, remove it.
+                    while(words.get(currIndex-1).equalsIgnoreCase(",")
+                        || words.get(currIndex-1).equalsIgnoreCase("and")
+                        || words.get(currIndex-1).equalsIgnoreCase("the"))
                         --currIndex;
                     
                     // Create the Triple and add it to the returned Triples
                     String value = createStringFromList(words.subList(indexOfPhrase, currIndex));
-                    Triple trip = new Triple(subject, "has-location", value, currentDoc, sentenceNumber);
-                    triples.add(trip);
+                    if(value.split(" ").length > 1 && !Arrays.asList(LOCATION_PHRASES).contains(value)){
+                        Triple trip = new Triple(subject, "has-location", value, currentDoc, sentenceNumber);
+                        triples.add(trip);
+                    }
                 }
             }
         }

@@ -79,6 +79,10 @@ public class TripleStore {
  
     }
 
+    public Map<String, Collection<Triple>> getStore() {
+        return tripleMap;
+    }
+
     public void printStore() {
         for(String key : tripleMap.keySet()) {
             System.out.println("\nKey: " + key + "\n[");

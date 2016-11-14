@@ -5,6 +5,7 @@ import com.aqa.kb.DocumentStore;
 import com.aqa.kb.TripleStore;
 
 import java.io.InputStream;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class KnowledgeBase {
@@ -44,7 +45,12 @@ public class KnowledgeBase {
      */
     private TripleStore tripleStore;
 
-/*
+    /**
+     * The subjects that the TripleStore has the subjects.
+     */
+    private HashSet<String> subjects;
+
+
     // Unfortunately had to hard code the file names
     private String[] filenames = {
         "/corpus/american-crocodile.txt", "/corpus/cuban-crocodile.txt",
@@ -54,10 +60,10 @@ public class KnowledgeBase {
         "/corpus/phillipine-crocodile.txt", "/corpus/saltwater-crocodile.txt",
         "/corpus/siamese-crocodile.txt", "/corpus/west-african-crocodile.txt"
     };
-*/
+
 
     // This is just to test the file-reading and knowledge base construction capabilities on only one file.
-    private String[] filenames = {"/corpus/nile-crocodile.txt"};
+//    private String[] filenames = {"/corpus/nile-crocodile.txt"};
 
     public KnowledgeBase(boolean explicit, boolean stats) {
         this.explicit = explicit;
@@ -65,6 +71,7 @@ public class KnowledgeBase {
 
         docStore = new DocumentStore(this.explicit, this.stats);
         tripleStore = new TripleStore(this.explicit, this.stats);
+        subjects = new HashSet<String>();
     }
 
     public void createCorpus() { 
@@ -102,8 +109,17 @@ public class KnowledgeBase {
         if(explicit)
             this.tripleStore.printStore();
 
+        for(String subject : this.tripleStore.getStore().keySet()){
+            if(!subjects.contains(subject))
+                subjects.add(subject);
+        }
+
         System.out.println("Corpus Creation Successful");
 
+    }
+
+    public HashSet<String> getSubjects() {
+        return subjects;
     }
 
     /**
@@ -124,7 +140,7 @@ public class KnowledgeBase {
      * Checks if line starts with a header tag.
      *  If so, sets the appropriate instance variables.
      */
-    public boolean isHeaderLine(String line) {
+    private boolean isHeaderLine(String line) {
         if(line.startsWith("<header>")){
             currentHeader = line.substring(8);
             currentSubheader = null;
@@ -137,7 +153,7 @@ public class KnowledgeBase {
      * Checks if line starts with a subheader tag.
      *  If so, sets the appropriate instance variables.
      */
-    public boolean isSubheaderLine(String line){
+    private boolean isSubheaderLine(String line){
         if(line.startsWith("<subheader>")){
             currentSubheader = line.substring(11);
             return true;

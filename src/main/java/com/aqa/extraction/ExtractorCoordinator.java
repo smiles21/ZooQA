@@ -19,11 +19,6 @@ public class ExtractorCoordinator {
     private LengthRelationExtractor lengthExtractor;
 
     /**
-     * A semantic relation extractor for prey.
-     */
-    private PreyRelationExtractor preyExtractor;
-
-    /**
      * A semantic relation extractor for location.
      */
     private LocationRelationExtractor locationExtractor;
@@ -41,7 +36,6 @@ public class ExtractorCoordinator {
     public ExtractorCoordinator() {
         weightExtractor = new WeightRelationExtractor();
         lengthExtractor = new LengthRelationExtractor();
-        preyExtractor = new PreyRelationExtractor();
         locationExtractor = new LocationRelationExtractor();
         
         habitatList = new ConceptList("/habitats.txt");
@@ -57,10 +51,6 @@ public class ExtractorCoordinator {
             triples.addAll(extracted);
 
         extracted = lengthExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
-        if(extracted.size() > 0)
-            triples.addAll(extracted);
-
-        extracted = preyExtractor.extractRelations(sentenceNumber, sentence, currentDoc);
         if(extracted.size() > 0)
             triples.addAll(extracted);
 

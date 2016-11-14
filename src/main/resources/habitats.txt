@@ -10,6 +10,10 @@ streams
 stream
 wetlands
 wetland
+creeks
+creek
+billabongs
+billabons
 marsh
 marshes
 swamp
@@ -43,3 +47,6 @@ plains
 plain
 tundra
 tundras
+saltwater
+freshwater
+brackish
