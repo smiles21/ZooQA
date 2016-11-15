@@ -60,7 +60,10 @@ public class LuceneScorer {
                     final Document luceneDoc = new Document();
                     final String id = i + ":" + j;
                     luceneDoc.add(new StringField(ID_FIELD, id, Field.Store.YES));
-                    luceneDoc.add(new TextField(TEXT_FIELD, sentences.get(i), Field.Store.YES));
+                    luceneDoc.add(new TextField(TEXT_FIELD, sentences.get(j), Field.Store.YES));
+
+                    System.out.println(id + " " + sentences.get(j) + "\n");
+
                     indexWriter.addDocument(luceneDoc);
                 }
             }
