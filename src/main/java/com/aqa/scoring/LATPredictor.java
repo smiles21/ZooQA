@@ -17,7 +17,7 @@ public class LATPredictor {
             return LAT.LOCATION;
         }
         for(final String lemma : query.lemmas()) {
-            if(lemma.equalsIgnoreCase("habitat") || lemma.equalsIgnoreCase("ecosystem"))
+            if(lemma.equalsIgnoreCase("habitat") || lemma.equalsIgnoreCase("ecosystem") || lemma.equalsIgnoreCase("environment"))
                 return LAT.HABITAT;
             if(lemma.equalsIgnoreCase("weight") || lemma.equalsIgnoreCase("weight")
                 || lemma.equalsIgnoreCase("heavy"))

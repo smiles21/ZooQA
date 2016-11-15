@@ -94,16 +94,18 @@ public class ZooQA {
 
             // Put in code to grab all Triples from the KB with the 
             //  subject and relation in it.
+            if(subject != null && lat != null) {
+                ArrayList<Triple> tripleResults = this.knowledgeBase.getResultTriples(subject, lat.relation());
 
-            ArrayList<Triple> tripleResults = this.knowledgeBase.getResultTriples(subject, lat.relation());
-
-            if(tripleResults.size() > 0){
-                for(Triple t : tripleResults)
-                    System.out.println(t);
+                if(tripleResults.size() > 0){
+                    for(Triple t : tripleResults)
+                        System.out.println(t);
+                } else {
+                    System.out.println("No triples about that.");
+                }
             } else {
                 System.out.println("No triples about that.");
             }
-
         } while(true);
 
     }
