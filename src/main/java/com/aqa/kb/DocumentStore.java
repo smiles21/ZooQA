@@ -33,6 +33,14 @@ public class DocumentStore {
         docList = new ArrayList<Document>();
     }
 
+    public Document getDocumentByIndex(int index) {
+        return this.docList.get(index);
+    }
+
+    public ArrayList<Document> getDocuments() {
+        return this.docList;
+    }
+
     public void addDocument(Document d) {
         this.docList.add(d);
     }

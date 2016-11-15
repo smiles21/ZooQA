@@ -32,8 +32,12 @@ public class Document {
         return this.text;
     }
 
-    public String getSentence(int index) {
+    public String getSentenceByIndex(int index) {
         return this.sentences.get(index);
+    }
+
+    public ArrayList<String> getSentences() {
+        return this.sentences;
     }
 
     public void setText(String t) {

@@ -4,9 +4,10 @@ import com.aqa.kb.KnowledgeBase;
 import com.aqa.kb.Triple;
 import com.aqa.scoring.LAT;
 import com.aqa.scoring.LATPredictor;
-import com.aqa.scoring.TripleScorer;
+import com.aqa.scoring.LuceneScorer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -29,6 +30,11 @@ public class ZooQA {
      */
     private KnowledgeBase knowledgeBase;
 
+    /**
+     * The LuceneScorer used for scoring documents
+     */
+    private LuceneScorer luceneScorer;
+
     public ZooQA(boolean explicit, boolean stats) {
         this.explicit = explicit;
         this.stats = stats;        
@@ -39,20 +45,14 @@ public class ZooQA {
         if(explicit)
             System.out.printf("[EXPLICIT] Flags: {explicit: %b, stats: %b}\n\n", this.explicit, this.stats);
 
+        // Create the knowledge base by reading the documents
         knowledgeBase = new KnowledgeBase(this.explicit, this.stats);
         knowledgeBase.createCorpus();
-
-
+       
+        luceneScorer = new LuceneScorer(knowledgeBase);
+        
     }
 
-    public static void pressEnterToContinue() {
-        System.out.print("Press Enter to continue...");
-        try {
-            System.in.read();
-            System.out.println();
-        }
-        catch(Exception e) {}
-    }
 
     private void printIntro() {
         System.out.println("\n************************************************************");
@@ -72,7 +72,6 @@ public class ZooQA {
     public void promptQuery() {
 
         Scanner scan = new Scanner(System.in);
-        TripleScorer tripleScorer = new TripleScorer();        
 
         do {
             
@@ -95,19 +94,34 @@ public class ZooQA {
             // Put in code to grab all Triples from the KB with the 
             //  subject and relation in it.
             if(subject != null && lat != null) {
-                ArrayList<Triple> tripleResults = this.knowledgeBase.getResultTriples(subject, lat.relation());
+                HashMap<String, Float> tripleResults = this.knowledgeBase.scoreSentences(subject, lat.relation());
 
                 if(tripleResults.size() > 0){
-                    for(Triple t : tripleResults)
-                        System.out.println(t);
+                    for(String sentence : tripleResults.keySet())
+                        System.out.println(sentence + " " + tripleResults.get(sentence) + "\n");
                 } else {
                     System.out.println("No triples about that.");
                 }
             } else {
                 System.out.println("No triples about that.");
             }
+
+            HashMap<String, Float> luceneResults = luceneScorer.scoreSentences(knowledgeBase, query);
+
+            for(String sentence : luceneResults.keySet())
+                System.out.println(sentence + " " + luceneResults.get(sentence) + "\n");
+
         } while(true);
 
+    }
+
+    public static void pressEnterToContinue() {
+        System.out.print("Press Enter to continue...");
+        try {
+            System.in.read();
+            System.out.println();
+        }
+        catch(Exception e) {}
     }
 
     public static void main(String[] args) {

@@ -6,6 +6,7 @@ import com.aqa.kb.TripleStore;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -96,8 +97,8 @@ public class KnowledgeBase {
                     if(isTitleLine(currentLine))
                         currentDoc.setTitle(currentLine.substring(7));
                     else if(!isTitleLine(currentLine)
-                        || !isHeaderLine(currentLine)
-                        || !isSubheaderLine(currentLine)) {
+                        && !isHeaderLine(currentLine)
+                        && !isSubheaderLine(currentLine)) {
                         
                         this.tripleStore.createTriples(sentenceNumber, currentLine, currentDoc);
                         currentDoc.addSentence(sentenceNumber, currentLine);
@@ -126,12 +127,20 @@ public class KnowledgeBase {
         return subjects;
     }
 
-    public ArrayList<Triple> getResultTriples(String subject, String relation) {
-        ArrayList<Triple> results = new ArrayList<Triple>();
+    public Document getDocumentByIndex(int index) {
+        return docStore.getDocumentByIndex(index);
+    }
+
+    public ArrayList<Document> getDocuments() {
+        return docStore.getDocuments();
+    }
+
+    public HashMap<String, Float> scoreSentences(String subject, String relation) {
+        HashMap<String, Float> results = new HashMap<String, Float>();
 
         for(Triple t : this.tripleStore.getTriplesOfSubject(subject)){
             if(t.hasRelation(relation))
-                results.add(t);
+                results.put(t.getDocument().getSentenceByIndex(t.getSentenceNumber()), (float)1.0);
         }
         
         return results;
