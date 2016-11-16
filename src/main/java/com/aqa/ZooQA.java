@@ -8,12 +8,18 @@ import com.aqa.scoring.LuceneScorer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 /**
  * ZooQA ("Zoo-Kah")
  */
 public class ZooQA {
+ 
+    /**
+     * The number of sentences to show to the user
+     */
+    private final int NUM_RESULTS_TO_PRINT = 5;
 
     /**
      * Flag for displaying more than the standard information
@@ -69,6 +75,66 @@ public class ZooQA {
         System.out.println("************************************************************");
     }
 
+    private void printSortedResults(HashMap<String, Float> scores) {
+        if(scores == null || scores.size() == 0) {
+            System.out.println("No scores to output.");
+            return;
+        }
+        // Keep track of the sentences we have output
+        HashSet<String> printed = new HashSet<String>(); 
+
+        // Print out column headers
+        System.out.println("\n Rank |  Score | Sentence");
+        System.out.println("-------------------------");
+
+        // Find the top scores and print them
+        for(int i = 0; i < NUM_RESULTS_TO_PRINT; i++) {
+            String topScoredSentence = null;
+            float topScore = (float)-1.0;
+            for(String sentence : scores.keySet()) {
+                if(!printed.contains(sentence)) {
+                    float currScore = scores.get(sentence);
+                    if(currScore > topScore) {
+                        topScoredSentence = sentence;
+                        topScore = currScore;
+                    } 
+                }
+            }
+            // Print out the formatted result
+            System.out.printf("%5d | %2.4f | %s\n", i+1, topScore, topScoredSentence);
+
+            // Store this sentence as printed
+            printed.add(topScoredSentence);
+
+        }
+
+    }
+
+    private HashMap<String, Float> computeFinalScores(HashMap<String, Float> scoresA, HashMap<String, Float> scoresB) {
+
+        // Give scoresA and scoresB a default value if we dont' have one
+        if(scoresA == null)
+            scoresA = new HashMap<String, Float>();
+        if(scoresB == null)
+            scoresB = new HashMap<String, Float>();
+
+        HashMap<String, Float> results = new HashMap<String, Float>();
+    
+        // Weight the first scores by one-half and add it to results
+        for(String sentence : scoresA.keySet()) 
+            results.put(sentence, (float)0.5 * scoresA.get(sentence));
+
+        // Add the other half of the scores to the final results
+        for(String sentence : scoresB.keySet()) {
+            if(results.containsKey(sentence))
+                results.put(sentence, results.get(sentence) + (float)0.5 * scoresB.get(sentence));
+            else
+                results.put(sentence, (float)0.5 * scoresB.get(sentence));
+        }
+
+        return results;
+    }
+
     public void promptQuery() {
 
         Scanner scan = new Scanner(System.in);
@@ -91,25 +157,26 @@ public class ZooQA {
                 }
             }
 
+            HashMap<String, Float> tripleResults = null;
+            HashMap<String, Float> luceneResults = null;
+
             // Put in code to grab all Triples from the KB with the 
             //  subject and relation in it.
             if(subject != null && lat != null) {
-                HashMap<String, Float> tripleResults = this.knowledgeBase.scoreSentences(subject, lat.relation());
-
-                if(tripleResults.size() > 0){
-                    for(String sentence : tripleResults.keySet())
-                        System.out.println(sentence + " " + tripleResults.get(sentence) + "\n");
-                } else {
-                    System.out.println("No triples about that.");
-                }
+                // Get the result sentences from Lucene
+                luceneResults = luceneScorer.scoreSentences(knowledgeBase, query, subject);
+                // Get the result sentences from the KnowledgeBase
+                tripleResults = this.knowledgeBase.scoreSentences(subject, lat.relation());
             } else {
-                System.out.println("No triples about that.");
+                System.out.println("Couldn't isolate a subject or relation.");
             }
+    
 
-            HashMap<String, Float> luceneResults = luceneScorer.scoreSentences(knowledgeBase, query);
-
-            for(String sentence : luceneResults.keySet())
-                System.out.println(sentence + " " + luceneResults.get(sentence) + "\n");
+            // Compute the final results
+            HashMap<String, Float> finalScores = computeFinalScores(tripleResults, luceneResults);
+          
+            // Show the results to the user 
+            printSortedResults(finalScores); 
 
         } while(true);
 
