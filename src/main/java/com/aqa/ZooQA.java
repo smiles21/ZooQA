@@ -160,6 +160,9 @@ public class ZooQA {
             HashMap<String, Float> tripleResults = null;
             HashMap<String, Float> luceneResults = null;
 
+            if(explicit)
+                System.out.printf("[EXPLICIT] LAT: %s; SUBJECT: %s\n", lat, subject);
+
             // Put in code to grab all Triples from the KB with the 
             //  subject and relation in it.
             if(subject != null && lat != null) {
