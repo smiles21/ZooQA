@@ -6,6 +6,9 @@ import com.aqa.scoring.LAT;
 import com.aqa.scoring.LATPredictor;
 import com.aqa.scoring.LuceneScorer;
 
+import java.io.InputStream;
+import java.io.PrintWriter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -32,6 +35,11 @@ public class ZooQA {
     private boolean stats;
 
     /**
+     * Flag for whether we are entering experiment mode
+     */
+    private boolean experiment;
+
+    /**
      * The DocumentStore for all the documents in the corpus
      */
     private KnowledgeBase knowledgeBase;
@@ -41,15 +49,20 @@ public class ZooQA {
      */
     private LuceneScorer luceneScorer;
 
-    public ZooQA(boolean explicit, boolean stats) {
+    public ZooQA(boolean explicit, boolean stats, boolean experiment) {
         this.explicit = explicit;
-        this.stats = stats;        
+        this.stats = stats;
+        this.experiment = experiment;
 
-        printIntro();
+        if(experiment)
+            printExperimentIntro();
+        else 
+            printIntro();
+        
         ZooQA.pressEnterToContinue();
 
         if(explicit)
-            System.out.printf("[EXPLICIT] Flags: {explicit: %b, stats: %b}\n\n", this.explicit, this.stats);
+            System.out.printf("[EXPLICIT] Flags: {explicit: %b, stats: %b, experiment: %b}\n\n", this.explicit, this.stats, this.experiment);
 
         // Create the knowledge base by reading the documents
         knowledgeBase = new KnowledgeBase(this.explicit, this.stats);
@@ -59,6 +72,18 @@ public class ZooQA {
         
     }
 
+    private void printExperimentIntro() { 
+        System.out.println("\n************************************************************");
+
+        System.out.println("Welcome to the Zoo-QA System Experiment Mode.\n");
+        System.out.println("In this mode, you will be given a series of question");
+        System.out.println("and answer pairs.  Your job will be to rank both the");
+        System.out.println("answers in terms of relevance and the relavance itself.");
+
+        System.out.println("\nMay need to add more here by how to score the confidence?");
+
+        System.out.println("\n************************************************************");
+    }
 
     private void printIntro() {
         System.out.println("\n************************************************************");
@@ -101,13 +126,78 @@ public class ZooQA {
                 }
             }
             // Print out the formatted result
-            System.out.printf("%5d | %2.4f | %s\n", i+1, topScore, topScoredSentence);
+            if(topScore >= 0.5)
+                System.out.printf("%5d | %2.4f | %s\n", i+1, topScore, topScoredSentence);
 
             // Store this sentence as printed
             printed.add(topScoredSentence);
 
         }
 
+    }
+
+    public void runExperiments() {
+
+        try {
+            InputStream in = getClass().getResourceAsStream("/questions/questions.txt");
+            Scanner scan = new Scanner(in);
+
+            PrintWriter pw = new PrintWriter("scores.txt", "UTF-8");
+
+            String question = null;
+            while(scan.hasNextLine()) {
+                question = scan.nextLine();
+                System.out.println("\n" + question);
+                pw.print(question + "\n");
+                
+                HashMap<String, Float> finalScores = queryKnowledgeBase(question);
+
+            }
+
+            pw.close();
+            scan.close();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        } 
+    }
+
+    private HashMap<String, Float> queryKnowledgeBase(String query) {
+
+        if(query.trim().equalsIgnoreCase(""))
+            return null;
+
+        LAT lat = LATPredictor.predictLAT(query);
+
+        String subject = null;
+        for(String s : this.knowledgeBase.getSubjects()){
+            System.out.println(s.toUpperCase());
+            if(query.toUpperCase().contains(s.toUpperCase())){
+                subject = s;
+                break;
+            }
+        }
+
+        HashMap<String, Float> tripleResults = null;
+        HashMap<String, Float> luceneResults = null;
+
+        // Put in code to grab all Triples from the KB with the 
+        //  subject and relation in it.
+        if(subject != null && lat != null) {
+            // Get the result sentences from Lucene
+            luceneResults = luceneScorer.scoreSentences(knowledgeBase, query, subject);
+            // Get the result sentences from the KnowledgeBase
+            tripleResults = this.knowledgeBase.scoreSentences(subject, lat.relation());
+        } else {
+            System.out.println("Couldn't isolate a subject or relation.");
+        }
+
+
+        // Compute the final results
+        HashMap<String, Float> finalScores = computeFinalScores(tripleResults, luceneResults);
+       
+        return finalScores;
+ 
     }
 
     private HashMap<String, Float> computeFinalScores(HashMap<String, Float> scoresA, HashMap<String, Float> scoresB) {
@@ -197,17 +287,24 @@ public class ZooQA {
     public static void main(String[] args) {
         boolean stats = false;
         boolean explicit = false;
+        boolean experiment = false;
 
         for(String arg : args) {
-            if(arg.equals("-stats"))
+            if(arg.equals("--stats"))
                 stats = true;
-            else if(arg.equals("-explicit"))
+            else if(arg.equals("--explicit"))
                 explicit = true;
+            else if(arg.equals("--experiment"))
+                experiment = true;
             else 
                 throw new IllegalArgumentException("Argument not recognized: " + arg);
         }
 
-        ZooQA zooQA = new ZooQA(explicit, stats);
-        zooQA.promptQuery();
+        ZooQA zooQA = new ZooQA(explicit, stats, experiment);
+        if(experiment) {
+            zooQA.runExperiments();
+        } else {
+            zooQA.promptQuery();
+        }
     }
 }

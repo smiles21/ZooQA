@@ -59,7 +59,7 @@ public class KnowledgeBase {
         "/corpus/freshwater-crocodile.txt", "/corpus/morelets-crocodile.txt",
         "/corpus/mugger-crocodile.txt", "/corpus/new-guinea-crocodile.txt",
         "/corpus/nile-crocodile.txt", "/corpus/orinoco-crocodile.txt",
-        "/corpus/phillipine-crocodile.txt", "/corpus/saltwater-crocodile.txt",
+        "/corpus/philippine-crocodile.txt", "/corpus/saltwater-crocodile.txt",
         "/corpus/siamese-crocodile.txt", "/corpus/west-african-crocodile.txt"
     };
 
@@ -116,7 +116,7 @@ public class KnowledgeBase {
 
         for(String subject : this.tripleStore.getStore().keySet()){
             if(!subjects.contains(subject))
-                subjects.add(subject);
+                subjects.add(subject.trim());
         }
 
         System.out.println("Corpus Creation Successful");
