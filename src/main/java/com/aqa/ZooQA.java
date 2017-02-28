@@ -61,11 +61,11 @@ public class ZooQA {
         
         ZooQA.pressEnterToContinue();
 
-        if(explicit)
+        if(explicit && !experiment)
             System.out.printf("[EXPLICIT] Flags: {explicit: %b, stats: %b, experiment: %b}\n\n", this.explicit, this.stats, this.experiment);
 
         // Create the knowledge base by reading the documents
-        knowledgeBase = new KnowledgeBase(this.explicit, this.stats);
+        knowledgeBase = new KnowledgeBase(this.explicit, this.stats, this.experiment);
         knowledgeBase.createCorpus();
        
         luceneScorer = new LuceneScorer(knowledgeBase);
@@ -140,26 +140,74 @@ public class ZooQA {
 
         try {
             InputStream in = getClass().getResourceAsStream("/questions/questions.txt");
-            Scanner scan = new Scanner(in);
+            Scanner fileScan = new Scanner(in);
 
             PrintWriter pw = new PrintWriter("scores.txt", "UTF-8");
 
             String question = null;
-            while(scan.hasNextLine()) {
-                question = scan.nextLine();
-                System.out.println("\n" + question);
+            while(fileScan.hasNextLine()) {
+                question = fileScan.nextLine();
                 pw.print(question + "\n");
-                
+            
                 HashMap<String, Float> finalScores = queryKnowledgeBase(question);
+                if(finalScores != null) {
+                    for(String ans : finalScores.keySet()) {
+
+                        // Show 
+                        printQuestionAnswerPair(question, ans, finalScores.get(question));
+
+                        System.out.print("Answer Rating: ");
+                        int answerScore = returnIntInput();
+
+
+                    }
+
+                } else {
+                    pw.print(question);
+                    pw.print("No Answers\n");
+                }
 
             }
 
             pw.close();
-            scan.close();
+            fileScan.close();
 
         } catch(Exception e) {
             e.printStackTrace();
         } 
+    }
+
+    private int returnIntInput() {
+        
+        Scanner scan = new Scanner(System.in);
+        int retVal = -1;
+
+        do {
+            
+            try {
+                String s = scan.nextLine();
+                int temp = Integer.parseInt(s);
+                retVal = temp;
+            } catch(Exception e) {
+                System.out.println("Could not parse the integer value");
+            }
+
+            if(retVal < 0 || retVal > 5) {
+                System.out.println("Make sure you enter between 0-5");
+            }
+
+        } while (retVal < 0 || retVal > 5);
+
+        return retVal;
+    }
+
+    private void printQuestionAnswerPair(String question, String answer, float score) {
+
+        System.out.println("\n*********************************************\n");
+        System.out.println("Question: " + question);
+        
+        System.out.println("\nAnswer  : " + answer);
+        System.out.println("Score     : " + score + "\n");
     }
 
     private HashMap<String, Float> queryKnowledgeBase(String query) {
@@ -171,7 +219,6 @@ public class ZooQA {
 
         String subject = null;
         for(String s : this.knowledgeBase.getSubjects()){
-            System.out.println(s.toUpperCase());
             if(query.toUpperCase().contains(s.toUpperCase())){
                 subject = s;
                 break;
@@ -250,7 +297,7 @@ public class ZooQA {
             HashMap<String, Float> tripleResults = null;
             HashMap<String, Float> luceneResults = null;
 
-            if(explicit)
+            if(explicit && !experiment)
                 System.out.printf("[EXPLICIT] LAT: %s; SUBJECT: %s\n", lat, subject);
 
             // Put in code to grab all Triples from the KB with the 

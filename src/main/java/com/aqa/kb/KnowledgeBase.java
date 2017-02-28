@@ -23,6 +23,11 @@ public class KnowledgeBase {
     private boolean stats;
 
     /**
+     * Flag for whether we are entering experiment mode
+     */
+    private boolean experiment;
+
+    /**
      * The title of the file currently being stored.
      */
     private String currentTitle;
@@ -67,9 +72,10 @@ public class KnowledgeBase {
     // This is just to test the file-reading and knowledge base construction capabilities on only one file.
 //    private String[] filenames = {"/corpus/nile-crocodile.txt"};
 
-    public KnowledgeBase(boolean explicit, boolean stats) {
+    public KnowledgeBase(boolean explicit, boolean stats, boolean experiment) {
         this.explicit = explicit;
         this.stats = stats;
+        this.experiment = experiment;
 
         docStore = new DocumentStore(this.explicit, this.stats);
         tripleStore = new TripleStore(this.explicit, this.stats);
@@ -89,7 +95,7 @@ public class KnowledgeBase {
                 String currentLine = null;
                 int sentenceNumber = 0;
 
-                if(explicit)
+                if(explicit && !experiment)
                     System.out.println("[EXPLICIT] Extracting Triples from " + filename);
  
                 while(scan.hasNextLine()) {
@@ -111,7 +117,7 @@ public class KnowledgeBase {
             e.printStackTrace();
         }
 
-        if(explicit)
+        if(explicit && !experiment)
             this.tripleStore.printStore();
 
         for(String subject : this.tripleStore.getStore().keySet()){
