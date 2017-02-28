@@ -153,17 +153,21 @@ public class ZooQA {
                 if(finalScores != null) {
                     for(String ans : finalScores.keySet()) {
 
-                        // Show 
-                        printQuestionAnswerPair(question, ans, finalScores.get(question));
+                        // Show the question and answer to the user 
+                        printQuestionAnswerPair(question, ans, finalScores.get(ans));
 
-                        System.out.print("Answer Rating: ");
-                        int answerScore = returnIntInput();
+                        // Retrieve the score for the answer and confidence
+                        int answerRating = promptIntInput("Answer Rating : ");
+                        int confidenceRating = promptIntInput("Confidence Rating : ");
 
-
+                        // Write all information to the file
+                        pw.write("ans: " + ans + "\n");
+                        pw.write("answerRating: " + answerRating + "\n");
+                        pw.write("ConfidenceRating: " + confidenceRating + "\n");
+                        pw.write("*****\n")
                     }
 
                 } else {
-                    pw.print(question);
                     pw.print("No Answers\n");
                 }
 
@@ -177,13 +181,13 @@ public class ZooQA {
         } 
     }
 
-    private int returnIntInput() {
+    private int promptIntInput(String prompt) {
         
         Scanner scan = new Scanner(System.in);
         int retVal = -1;
 
         do {
-            
+            System.out.print(prompt);
             try {
                 String s = scan.nextLine();
                 int temp = Integer.parseInt(s);
@@ -192,11 +196,11 @@ public class ZooQA {
                 System.out.println("Could not parse the integer value");
             }
 
-            if(retVal < 0 || retVal > 5) {
-                System.out.println("Make sure you enter between 0-5");
+            if(retVal < 0 || retVal > 3) {
+                System.out.println("Make sure you enter between 0-3");
             }
 
-        } while (retVal < 0 || retVal > 5);
+        } while (retVal < 0 || retVal > 3);
 
         return retVal;
     }
@@ -207,7 +211,7 @@ public class ZooQA {
         System.out.println("Question: " + question);
         
         System.out.println("\nAnswer  : " + answer);
-        System.out.println("Score     : " + score + "\n");
+        System.out.println("Score   : " + score + "\n");
     }
 
     private HashMap<String, Float> queryKnowledgeBase(String query) {
@@ -249,7 +253,7 @@ public class ZooQA {
 
     private HashMap<String, Float> computeFinalScores(HashMap<String, Float> scoresA, HashMap<String, Float> scoresB) {
 
-        // Give scoresA and scoresB a default value if we dont' have one
+        // Give scoresA and scoresB a default value if we don't have one
         if(scoresA == null)
             scoresA = new HashMap<String, Float>();
         if(scoresB == null)
@@ -267,6 +271,17 @@ public class ZooQA {
                 results.put(sentence, results.get(sentence) + (float)0.5 * scoresB.get(sentence));
             else
                 results.put(sentence, (float)0.5 * scoresB.get(sentence));
+        }
+
+        // If the confidence for an answer is not above 0.5, remove it from the final scores
+        HashSet<String> removals = new HashSet<String>();
+        for(String sentence : results.keySet()) {
+            if(results.get(sentence) < 0.5) {
+                removals.add(sentence);
+            }
+        }
+        for(String sentence : removals) {
+            results.remove(sentence);
         }
 
         return results;
