@@ -49,16 +49,25 @@ public class ZooQA {
      */
     private LuceneScorer luceneScorer;
 
+    /**
+     * The name of the experimenter currently using the system.
+     *  Useful for file output names.
+     */
+    private String experimenterName;
+
     public ZooQA(boolean explicit, boolean stats, boolean experiment) {
         this.explicit = explicit;
         this.stats = stats;
         this.experiment = experiment;
 
-        if(experiment)
+        if(experiment) {
             printExperimentIntro();
-        else 
+            setExperimenterName();
+        }
+        else {
             printIntro();
-        
+        }
+
         ZooQA.pressEnterToContinue();
 
         if(explicit && !experiment)
@@ -142,7 +151,8 @@ public class ZooQA {
             InputStream in = getClass().getResourceAsStream("/questions/questions.txt");
             Scanner fileScan = new Scanner(in);
 
-            PrintWriter pw = new PrintWriter("scores.txt", "UTF-8");
+            String outputFilename = "LuceneScores-" + experimenterName + ".txt";
+            PrintWriter pw = new PrintWriter(outputFilename, "UTF-8");
 
             String question = null;
             while(fileScan.hasNextLine()) {
@@ -150,7 +160,7 @@ public class ZooQA {
                 pw.print(question + "\n");
             
                 HashMap<String, Float> finalScores = queryKnowledgeBase(question);
-                if(finalScores != null) {
+                if(finalScores != null && finalScores.size() > 0) {
                     for(String ans : finalScores.keySet()) {
 
                         // Show the question and answer to the user 
@@ -162,6 +172,7 @@ public class ZooQA {
 
                         // Write all information to the file
                         pw.write("ans: " + ans + "\n");
+                        pw.write("Calculated Score: " + finalScores.get(ans) + "\n");
                         pw.write("answerRating: " + answerRating + "\n");
                         pw.write("ConfidenceRating: " + confidenceRating + "\n");
                         pw.write("*****\n")
@@ -285,6 +296,15 @@ public class ZooQA {
         }
 
         return results;
+    }
+
+    // Get the experimenter's name for file output
+    private void setExperimenterName() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your first name: ");
+        String name = scan.nextLine();
+
+        this.experimenterName = name.replaceAll(" ", "");
     }
 
     public void promptQuery() {
