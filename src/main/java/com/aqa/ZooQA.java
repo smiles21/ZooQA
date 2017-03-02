@@ -66,9 +66,8 @@ public class ZooQA {
         }
         else {
             printIntro();
+            ZooQA.pressEnterToContinue();
         }
-
-        ZooQA.pressEnterToContinue();
 
         if(explicit && !experiment)
             System.out.printf("[EXPLICIT] Flags: {explicit: %b, stats: %b, experiment: %b}\n\n", this.explicit, this.stats, this.experiment);
@@ -151,13 +150,13 @@ public class ZooQA {
             InputStream in = getClass().getResourceAsStream("/questions/questions.txt");
             Scanner fileScan = new Scanner(in);
 
-            String outputFilename = "LuceneScores-" + experimenterName + ".txt";
+            String outputFilename = "ZooQAScores-" + experimenterName + ".txt";
             PrintWriter pw = new PrintWriter(outputFilename, "UTF-8");
 
             String question = null;
             while(fileScan.hasNextLine()) {
                 question = fileScan.nextLine();
-                pw.print(question + "\n");
+                pw.print("Question: " + question + "\n");
             
                 HashMap<String, Float> finalScores = queryKnowledgeBase(question);
                 if(finalScores != null && finalScores.size() > 0) {
@@ -171,11 +170,11 @@ public class ZooQA {
                         int confidenceRating = promptIntInput("Confidence Rating : ");
 
                         // Write all information to the file
-                        pw.write("ans: " + ans + "\n");
+                        pw.write("Answer: " + ans + "\n");
                         pw.write("Calculated Score: " + finalScores.get(ans) + "\n");
                         pw.write("answerRating: " + answerRating + "\n");
                         pw.write("ConfidenceRating: " + confidenceRating + "\n");
-                        pw.write("*****\n")
+                        pw.write("*****\n");
                     }
 
                 } else {
